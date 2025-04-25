@@ -5,26 +5,13 @@ using UnityEngine;
 public class RedPlatReveal : MonoBehaviour
 {
 
-    public SpriteMask spriteMask;
-
-    private bool maskActive = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Collider2D physicalCollider;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("RedSignal"))
         {
-            ToggleMask(false);
+            physicalCollider.enabled = true;
         }
     }
 
@@ -32,16 +19,7 @@ public class RedPlatReveal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RedSignal"))
         {
-            ToggleMask(true);
-        }
-    }
-
-    void ToggleMask(bool active)
-    {
-        maskActive = active;
-        if (spriteMask != null)
-        {
-            spriteMask.enabled = active;
+            physicalCollider.enabled = false;
         }
     }
 }
