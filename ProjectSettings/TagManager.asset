@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RedSignal
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: RedLayer
+    uniqueID: 3885038959
+    locked: 0
+  - name: GreenLayer
+    uniqueID: 1083530713
+    locked: 0
+  - name: BlueLayer
+    uniqueID: 4005790871
+    locked: 0
+  - name: YellowLayer
+    uniqueID: 3296756073
+    locked: 0
+  - name: PurpleLayer
+    uniqueID: 968289589
+    locked: 0
+  - name: TurqLayer
+    uniqueID: 4091258013
+    locked: 0
+  - name: WhiteLayer
+    uniqueID: 567981851
     locked: 0
