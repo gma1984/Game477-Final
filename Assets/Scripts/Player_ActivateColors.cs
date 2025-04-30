@@ -15,10 +15,11 @@ public class Player_ActivateColors : MonoBehaviour
     public GameObject magentaSignal;
     public GameObject whiteSignal;
     private bool redOn = false;
-    private bool redOn = false;
-    private bool redOn = false;
-    private bool redOn = false;
-    private bool redOn = false;
+    //private bool greenOn = false;
+    //private bool blueOn = false;
+    //private bool yellowOn = false;
+    //private bool purpleOn = false;
+    //private bool cyanOn = false;
     // Start is called before the first frame update
     void Start()
     {
