@@ -11,6 +11,8 @@ TagManager:
   - PurpleSignal
   - TurqSignal
   - WhiteSignal
+  - Wall
+  - BasicEnemy
   layers:
   - Default
   - TransparentFX
