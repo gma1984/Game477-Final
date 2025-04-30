@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - RedSignal
+  - GreenSignal
+  - BlueSignal
+  - YellowSignal
+  - PurpleSignal
+  - TurqSignal
+  - WhiteSignal
+  - Wall
+  - BasicEnemy
   layers:
   - Default
   - TransparentFX
