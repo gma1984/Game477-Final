@@ -38,12 +38,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Move_Right"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""39d188cc-d563-48a9-b317-186b016e1ead"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Jump"",
