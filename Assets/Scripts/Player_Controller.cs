@@ -8,11 +8,30 @@ public class Player_Controller : MonoBehaviour
 {
     public float move_speed = 10;
     private InputSystem_Actions input;
+    public Vector3 jump;
+    public float jumpForce;
+    public bool isGrounded;
+    Rigidbody2D rb;
+
+    public bool port_1_unlocked;
+    public bool port_2_unlocked;
+    public bool port_3_unlocked;
+
+    public bool port_1_open;
+    public bool port_2_open;
+    public bool port_3_open;
+
+    public bool red_active;
+    public bool green_active;
+    public bool blue_active;
     // Start is called before the first frame update
     void Start()
     {
         input = new InputSystem_Actions();
         input.Enable();
+
+        rb = GetComponent<Rigidbody2D>();
+    	jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -20,5 +39,21 @@ public class Player_Controller : MonoBehaviour
     {
         transform.Translate(Vector3.right * move_speed * input.Player.Move_Right.ReadValue<float>() * Time.deltaTime);
         transform.Translate(Vector3.left * move_speed * input.Player.Move_Left.ReadValue<float>() * Time.deltaTime);
+
+        if((input.Player.Jump.ReadValue<float>() != 0) && isGrounded)
+        {
+            rb.AddForce(jump * jumpForce, ForceMode2D.Impulse);
+    		isGrounded = false;
+        }
+    }
+
+    void OnCollisionStay2D()
+    {
+        isGrounded = true;
+    }
+
+    public void ColorHandler()
+    {
+        //fill later
     }
 }

@@ -25,66 +25,66 @@
                 },
                 {
                     "name": "Jump",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "776f8994-5b63-4056-9fff-ecebc4057b6f",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Unplug_Slot_1",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "68682353-5a15-4d16-9b0f-1e4a980dd884",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Unplug_Slot_2",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "7ece79d6-fcf1-48a2-ac85-302346f6ee3b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Unplug_Slot_3",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "ffa600db-3a02-4a12-85b8-40ad85a3cefd",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Plug_Red",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "171f0acb-02fd-4cce-bc2e-cde3d84eac2d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Plug_Green",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "f2c8b344-990e-431f-bb56-ee6811d25ca8",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Plug_Blue",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "4f1030b4-f7c3-4715-8ef1-52fc14a0b1f5",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
