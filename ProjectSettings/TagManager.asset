@@ -13,6 +13,8 @@ TagManager:
   - WhiteSignal
   - Wall
   - BasicEnemy
+  - Floor
+  - Ceiling
   layers:
   - Default
   - TransparentFX
