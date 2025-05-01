@@ -19,10 +19,6 @@ public class Player_ActivateColors : MonoBehaviour
     public bool red = false;
     public bool green = false;
     public bool blue = false;
-    public bool yellow = false;
-    public bool magenta = false;
-    public bool cyan = false;
-    public bool white = false;
     public bool jackOne = false;
     public bool jackTwo = false;
     public bool jackThree = false;
