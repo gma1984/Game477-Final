@@ -13,8 +13,8 @@ public class Player_ActivateColors : MonoBehaviour
     public GameObject greenSignal;
     public GameObject blueSignal;
     public GameObject yellowSignal;
-    public GameObject cyanSignal;
     public GameObject magentaSignal;
+    public GameObject cyanSignal;
     public GameObject whiteSignal;
     public bool red = false;
     public bool green = false;
