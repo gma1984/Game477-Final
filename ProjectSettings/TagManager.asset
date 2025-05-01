@@ -4,17 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - RedSignal
-  - GreenSignal
-  - BlueSignal
-  - YellowSignal
-  - PurpleSignal
-  - TurqSignal
-  - WhiteSignal
   - Wall
   - BasicEnemy
   - Floor
   - Ceiling
+  - RedSignal
+  - GreenSignal
+  - BlueSignal
+  - YellowSignal
+  - MagentaSignal
+  - CyanSignal
+  - WhiteSignal
   layers:
   - Default
   - TransparentFX
@@ -64,10 +64,10 @@ TagManager:
   - name: YellowLayer
     uniqueID: 3296756073
     locked: 0
-  - name: PurpleLayer
+  - name: MagentaLayer
     uniqueID: 968289589
     locked: 0
-  - name: TurqLayer
+  - name: CyanLayer
     uniqueID: 4091258013
     locked: 0
   - name: WhiteLayer

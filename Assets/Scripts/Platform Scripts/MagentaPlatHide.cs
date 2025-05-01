@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurqPlatReveal : MonoBehaviour
+public class MagentaPlatHide : MonoBehaviour
 {
 
     public Collider2D physicalCollider;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("TurqSignal"))
+        if (collision.gameObject.CompareTag("MagentaSignal"))
         {
-            physicalCollider.enabled = true;
+            physicalCollider.enabled = false;
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("TurqSignal"))
+        if (collision.gameObject.CompareTag("MagentaSignal"))
         {
-            physicalCollider.enabled = false;
+            physicalCollider.enabled = true;
         }
     }
 }

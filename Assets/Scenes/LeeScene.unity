@@ -2267,7 +2267,7 @@ GameObject:
   - component: {fileID: 613138678}
   m_Layer: 0
   m_Name: TurqReveal
-  m_TagString: TurqSignal
+  m_TagString: CyanSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3660,7 +3660,7 @@ GameObject:
   - component: {fileID: 977025578}
   m_Layer: 0
   m_Name: TurqReveal
-  m_TagString: TurqSignal
+  m_TagString: CyanSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4450,7 +4450,7 @@ GameObject:
   - component: {fileID: 1200348638}
   m_Layer: 0
   m_Name: PurpleReveal
-  m_TagString: PurpleSignal
+  m_TagString: MagentaSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5693,10 +5693,6 @@ MonoBehaviour:
   red: 1
   green: 1
   blue: 1
-  yellow: 1
-  magenta: 1
-  cyan: 1
-  white: 1
   jackOne: 1
   jackTwo: 1
   jackThree: 1
@@ -6403,7 +6399,7 @@ GameObject:
   - component: {fileID: 1664325153}
   m_Layer: 0
   m_Name: PurpleReveal
-  m_TagString: PurpleSignal
+  m_TagString: MagentaSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
