@@ -12,18 +12,7 @@ public class Player_Controller : MonoBehaviour
     public float jumpForce;
     public bool isGrounded;
     Rigidbody2D rb;
-
-    public bool port_1_unlocked;
-    public bool port_2_unlocked;
-    public bool port_3_unlocked;
-
-    public bool port_1_open;
-    public bool port_2_open;
-    public bool port_3_open;
-
-    public bool red_active;
-    public bool green_active;
-    public bool blue_active;
+    public Player_ActivateColors ColorScript;
 
     // Start is called before the first frame update
     void Start()

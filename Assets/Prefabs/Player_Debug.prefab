@@ -176,6 +176,7 @@ MonoBehaviour:
   jump: {x: 0, y: 0, z: 0}
   jumpForce: 1
   isGrounded: 0
+  ColorScript: {fileID: 7964678738438559386}
   port_1_unlocked: 0
   port_2_unlocked: 0
   port_3_unlocked: 0
@@ -247,3 +248,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3496446155579048401, guid: 003b93c7e5ef98b45bb27640bae86fb2, type: 3}
   m_PrefabInstance: {fileID: 1526136475502712135}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7964678738438559386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8909760623670690781, guid: 003b93c7e5ef98b45bb27640bae86fb2, type: 3}
+  m_PrefabInstance: {fileID: 1526136475502712135}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699d852c9f91d3749b9252f6ddefa574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
