@@ -42,9 +42,12 @@ public class Player_Controller : MonoBehaviour
         //Hold on to it
     }
 
-    void OnCollisionStay2D()
+    void OnCollisionStay2D(Collision2D collision)
     {
-        isGrounded = true;
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+        }
     }
 
     public void ColorHandler()
