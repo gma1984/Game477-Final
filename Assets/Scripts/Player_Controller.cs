@@ -13,6 +13,9 @@ public class Player_Controller : MonoBehaviour
     public bool isGrounded;
     Rigidbody2D rb;
     public Player_ActivateColors ColorScript;
+    public Transform groundSensor;
+    public LayerMask groundCheckLayerMask;
+    public float groundCheckDistance = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,13 +30,13 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = RaycastFromSensor(groundSensor);
         transform.Translate(Vector3.right * move_speed * input.Player.Move_Right.ReadValue<float>() * Time.deltaTime);
         transform.Translate(Vector3.left * move_speed * input.Player.Move_Left.ReadValue<float>() * Time.deltaTime);
 
         if((input.Player.Jump.ReadValue<float>() != 0) && isGrounded)
         {
             rb.AddForce(jump * jumpForce, ForceMode2D.Impulse);
-    		isGrounded = false;
         }
     }
 
@@ -44,10 +47,20 @@ public class Player_Controller : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        // Bleh
+    }
+
+    public bool RaycastFromSensor(Transform groundSensor)
+    {
+        RaycastHit2D hit;
+        var position = groundSensor.position;
+        var forward = groundSensor.forward;
+        hit = Physics2D.Raycast(position, forward, groundCheckDistance, groundCheckLayerMask);
+        if (hit.collider != null)
         {
-            isGrounded = true;
+            return true;
         }
+        return false;
     }
 
     public void ColorHandler()
