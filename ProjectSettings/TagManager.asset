@@ -15,6 +15,9 @@ TagManager:
   - MagentaSignal
   - CyanSignal
   - WhiteSignal
+  - PlugB
+  - PlugR
+  - PlugG
   layers:
   - Default
   - TransparentFX

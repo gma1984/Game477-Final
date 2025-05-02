@@ -271,6 +271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlugR
       objectReference: {fileID: 0}
+    - target: {fileID: 2699931574576661268, guid: 6d8bfa0b7a3f1fe45bcaee9a73f95c3f, type: 3}
+      propertyPath: m_TagString
+      value: PlugR
+      objectReference: {fileID: 0}
     - target: {fileID: 6004947483216188220, guid: 6d8bfa0b7a3f1fe45bcaee9a73f95c3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -328,6 +332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlugG
       objectReference: {fileID: 0}
+    - target: {fileID: 2699931574576661268, guid: 4134b2d8df38d0040bbb2082d815b028, type: 3}
+      propertyPath: m_TagString
+      value: PlugG
+      objectReference: {fileID: 0}
     - target: {fileID: 6004947483216188220, guid: 4134b2d8df38d0040bbb2082d815b028, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -383,6 +391,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2699931574576661268, guid: c78ae5220b7386946838c6592358e1e8, type: 3}
       propertyPath: m_Name
+      value: PlugB
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699931574576661268, guid: c78ae5220b7386946838c6592358e1e8, type: 3}
+      propertyPath: m_TagString
       value: PlugB
       objectReference: {fileID: 0}
     - target: {fileID: 6004947483216188220, guid: c78ae5220b7386946838c6592358e1e8, type: 3}
