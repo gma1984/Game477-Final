@@ -215,11 +215,11 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Magenta);
         }
-        else if (Input.GetKeyDown(KeyCode.G))
+        else if (Input.GetKeyDown(KeyCode.G) && green)
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if (Input.GetKeyDown(KeyCode.B) && blue)
         {
             ChangeState(State.Blue);
         }
@@ -266,7 +266,7 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if (Input.GetKeyDown(KeyCode.B) && blue)
         {
             ChangeState(State.Blue);
         }
