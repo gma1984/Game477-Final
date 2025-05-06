@@ -13,6 +13,7 @@ public class Player_Controller : MonoBehaviour
     public float jumpForce;
     public bool isGrounded;
     Rigidbody2D rb;
+    SpriteRenderer sr;
     public Player_ActivateColors ColorScript;
     public Transform groundSensor;
     public LayerMask groundCheckLayerMask;
@@ -25,6 +26,7 @@ public class Player_Controller : MonoBehaviour
     {
         input = new InputSystem_Actions();
         input.Enable();
+        sr = GetComponent<SpriteRenderer>();
 
         rb = GetComponent<Rigidbody2D>();
     	jump = new Vector3(0.0f, 6.0f, 0.0f);
@@ -34,6 +36,14 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            sr.flipX = true;
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            sr.flipX = false;
+        }
         if (playerHealth >= 100f)
         {
             playerHealth = 100f;
