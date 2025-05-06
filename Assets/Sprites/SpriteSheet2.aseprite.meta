@@ -223,18 +223,38 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: empty
+  - name: Floor1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 1}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 85
+      width: 16
+      height: 16
+    spriteID: 2c43a11acb270468893c972a221a1219
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UiHeart
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 67
-      y: 4
-      width: 18
-      height: 18
-    spriteID: 2c43a11acb270468893c972a221a1219
+      x: 292
+      y: 133
+      width: 32
+      height: 32
+    spriteID: a82b7be94679d4bc2a84c67c7e684bb5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -262,8 +282,8 @@ ScriptedImporter:
       cellRect:
         x: 0
         y: 19
-        width: 208
-        height: 160
+        width: 320
+        height: 161
       spriteId: 6491d41b8e51f407196490c4bdea408c
     linkedCells: []
     parentIndex: -1
@@ -332,4 +352,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 320, y: 180}
-  previousTextureSize: {x: 256, y: 256}
+  previousTextureSize: {x: 512, y: 256}
