@@ -32,6 +32,9 @@ public class Player_Controller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     	jump = new Vector3(0.0f, 6.0f, 0.0f);
         playerHealth = 3;
+
+        //Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.visible = false;
     }
 
     // Update is called once per frame
