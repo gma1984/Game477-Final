@@ -315,7 +315,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -8162761168899385350, guid: 12c5fd6763486438ba720f13545d8c88, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: -998211223
   m_BackSortingLayerID: -289176425
@@ -489,7 +489,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -8162761168899385350, guid: 12c5fd6763486438ba720f13545d8c88, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: -203709283
   m_BackSortingLayerID: 968289589
@@ -1024,7 +1024,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -8162761168899385350, guid: 12c5fd6763486438ba720f13545d8c88, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 567981851
   m_BackSortingLayerID: -203709283
@@ -1317,7 +1317,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -8162761168899385350, guid: 12c5fd6763486438ba720f13545d8c88, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 968289589
   m_BackSortingLayerID: -998211223
@@ -1791,7 +1791,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -8162761168899385350, guid: 12c5fd6763486438ba720f13545d8c88, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: -289176425
   m_BackSortingLayerID: 1083530713
@@ -1963,7 +1963,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -8162761168899385350, guid: 12c5fd6763486438ba720f13545d8c88, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 1083530713
   m_BackSortingLayerID: -409928337
@@ -2611,7 +2611,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -8162761168899385350, guid: 12c5fd6763486438ba720f13545d8c88, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: -409928337
   m_BackSortingLayerID: 0
