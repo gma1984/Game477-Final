@@ -160,7 +160,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &9015740534800469542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +183,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheckDistance: 0.1
+  playerHealth: 100
+  iFrames: 0
 --- !u!1 &7197469926313821913
 GameObject:
   m_ObjectHideFlags: 0
