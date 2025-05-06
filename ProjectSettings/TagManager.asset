@@ -18,6 +18,9 @@ TagManager:
   - PlugB
   - PlugR
   - PlugG
+  - Port1
+  - Port2
+  - Port3
   layers:
   - Default
   - TransparentFX

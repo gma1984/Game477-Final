@@ -50,6 +50,34 @@ public class Player_Controller : MonoBehaviour
         // Bleh
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlugR"))
+        {
+            ColorScript.red = true;
+        }
+        if (collision.gameObject.CompareTag("PlugG"))
+        {
+            ColorScript.green = true;
+        }
+        if (collision.gameObject.CompareTag("PlugB"))
+        {
+            ColorScript.blue = true;
+        }
+        if (collision.gameObject.CompareTag("Port1"))
+        {
+            ColorScript.portOne = true;
+        }
+        if (collision.gameObject.CompareTag("Port2"))
+        {
+            ColorScript.portTwo = true;
+        }
+        if (collision.gameObject.CompareTag("Port3"))
+        {
+            ColorScript.portThree = true;
+        }
+    }
+
     public bool RaycastFromSensor(Transform groundSensor)
     {
         RaycastHit2D hit;
