@@ -152,19 +152,19 @@ public class Player_ActivateColors : MonoBehaviour
     #region State Stay Methods
     private void StateStay_None()
     {
-        if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree)
+        if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree && red && green && blue)
         {
             ChangeState(State.White);
         }
-        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G)) || Input.GetKeyDown(KeyCode.Alpha1)) && portTwo)
+        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G)) || Input.GetKeyDown(KeyCode.Alpha1)) && portTwo && red && green)
         {
             ChangeState(State.Yellow);
         }
-        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha2)) && portTwo)
+        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha2)) && portTwo && red && blue)
         {
             ChangeState(State.Magenta);
         }
-        else if (((Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha3)) && portTwo)
+        else if (((Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha3)) && portTwo && green && blue)
         {
             ChangeState(State.Cyan);
         }

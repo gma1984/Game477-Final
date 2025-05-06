@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Player_Controller : MonoBehaviour
     public Transform groundSensor;
     public LayerMask groundCheckLayerMask;
     public float groundCheckDistance = 0.1f;
+    public float playerHealth = 100f;
+    public bool iFrames = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,25 +28,43 @@ public class Player_Controller : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
     	jump = new Vector3(0.0f, 6.0f, 0.0f);
+        playerHealth = 100f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        isGrounded = RaycastFromSensor(groundSensor);
-        transform.Translate(Vector3.right * move_speed * input.Player.Move_Right.ReadValue<float>() * Time.deltaTime);
-        transform.Translate(Vector3.left * move_speed * input.Player.Move_Left.ReadValue<float>() * Time.deltaTime);
-
-        if((input.Player.Jump.ReadValue<float>() != 0) && isGrounded)
+        if (playerHealth >= 100f)
         {
-            rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
-            //rb.AddForce(Vector3.up * jumpForce);
+            playerHealth = 100f;
+        }
+        if (playerHealth > 0f)
+        {
+            isGrounded = RaycastFromSensor(groundSensor);
+            transform.Translate(Vector3.right * move_speed * input.Player.Move_Right.ReadValue<float>() * Time.deltaTime);
+            transform.Translate(Vector3.left * move_speed * input.Player.Move_Left.ReadValue<float>() * Time.deltaTime);
+
+            if((input.Player.Jump.ReadValue<float>() != 0) && isGrounded)
+            {
+                rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
+                //rb.AddForce(Vector3.up * jumpForce);
+            }
+        }
+        else if (playerHealth <= 0f)
+        {
+            playerHealth = 0f;
+            SceneManager.LoadScene("Game Over");
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Hold on to it
+        if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
+        {
+            playerHealth -= 10f;
+            iFrames = true;
+            Invoke("RemoveIFrames", 1.5f);
+        }
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -56,26 +77,38 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("PlugR"))
         {
             ColorScript.red = true;
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("PlugG"))
         {
             ColorScript.green = true;
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("PlugB"))
         {
             ColorScript.blue = true;
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Port1"))
         {
             ColorScript.portOne = true;
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Port2"))
         {
             ColorScript.portTwo = true;
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Port3"))
         {
             ColorScript.portThree = true;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
+        {
+            playerHealth -= 10f;
+            iFrames = true;
+            Invoke("RemoveIFrames", 1.5f);
         }
     }
 
@@ -95,5 +128,10 @@ public class Player_Controller : MonoBehaviour
     public void ColorHandler()
     {
         //fill later
+    }
+
+    private void RemoveIFrames()
+    {
+        iFrames = false;
     }
 }
