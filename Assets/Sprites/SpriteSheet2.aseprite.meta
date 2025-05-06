@@ -167,7 +167,7 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 3, y: 3, z: 3, w: 3}
     rect:
       serializedVersion: 2
       x: 196
@@ -203,11 +203,11 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: SpriteSheet2_3
+  - name: LockedDoor
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 8, y: 2, z: 8, w: 2}
     rect:
       serializedVersion: 2
       x: 35
@@ -223,7 +223,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: SpriteSheet2_4
+  - name: empty
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
