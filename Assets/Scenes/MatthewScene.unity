@@ -424,11 +424,72 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlphaRoomBlueDrop
       objectReference: {fileID: 0}
+    - target: {fileID: 8577886999390153872, guid: 6f7ca6aeab2923049809c3af4f0c7bf9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7ca6aeab2923049809c3af4f0c7bf9, type: 3}
+--- !u!1001 &6107770568507884221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2645671026249447934, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_Name
+      value: AlphaRoomFlipFlopRedDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.5892067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462306276348157056, guid: c24368090b805154aa8ab12a403c2870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c24368090b805154aa8ab12a403c2870, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -436,3 +497,4 @@ SceneRoots:
   - {fileID: 704000426}
   - {fileID: 473338315}
   - {fileID: 3808223648873403236}
+  - {fileID: 6107770568507884221}
