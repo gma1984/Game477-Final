@@ -24,7 +24,7 @@ public class Player_Controller : MonoBehaviour
         input.Enable();
 
         rb = GetComponent<Rigidbody2D>();
-    	jump = new Vector3(0.0f, 2.0f, 0.0f);
+    	jump = new Vector3(0.0f, 6.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -36,7 +36,8 @@ public class Player_Controller : MonoBehaviour
 
         if((input.Player.Jump.ReadValue<float>() != 0) && isGrounded)
         {
-            rb.AddForce(jump * jumpForce, ForceMode2D.Impulse);
+            rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
+            //rb.AddForce(Vector3.up * jumpForce);
         }
     }
 

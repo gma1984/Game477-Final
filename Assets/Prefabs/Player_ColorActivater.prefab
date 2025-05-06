@@ -1594,9 +1594,9 @@ MonoBehaviour:
   red: 0
   green: 0
   blue: 0
-  jackOne: 0
-  jackTwo: 0
-  jackThree: 0
+  portOne: 0
+  portTwo: 0
+  portThree: 0
 --- !u!1 &4076908047914488502
 GameObject:
   m_ObjectHideFlags: 0
