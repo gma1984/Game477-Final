@@ -18,9 +18,10 @@ public class Player_Controller : MonoBehaviour
     public Transform groundSensor;
     public LayerMask groundCheckLayerMask;
     public float groundCheckDistance = 0.1f;
-    public int playerHealth = 3;
-    public GameObject[] hearts;
+    public float playerHealth = 100f;
     public bool iFrames = false;
+    private int dir = 0;
+    private Rigidbody rigid;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,7 @@ public class Player_Controller : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
     	jump = new Vector3(0.0f, 6.0f, 0.0f);
-        playerHealth = 3;
-
-        //Cursor.lockState = CursorLockMode.Confined;
-        //Cursor.visible = false;
+        playerHealth = 100f;
     }
 
     // Update is called once per frame
@@ -43,42 +41,50 @@ public class Player_Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             sr.flipX = true;
+            dir = -1;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             sr.flipX = false;
+            dir = 1;
         }
-        if (playerHealth >= 3)
+        if (playerHealth >= 100f)
         {
-            playerHealth = 3;
+            playerHealth = 100f;
         }
-        if (playerHealth > 0)
+        if (playerHealth > 0f)
         {
             isGrounded = RaycastFromSensor(groundSensor);
-            transform.Translate(Vector3.right * move_speed * input.Player.Move_Right.ReadValue<float>() * Time.deltaTime);
-            transform.Translate(Vector3.left * move_speed * input.Player.Move_Left.ReadValue<float>() * Time.deltaTime);
+            VelocityX(dir, isGrounded);
 
             if((input.Player.Jump.ReadValue<float>() != 0) && isGrounded)
             {
                 rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
                 //rb.AddForce(Vector3.up * jumpForce);
             }
-
-            if (Input.GetKeyDown(KeyCode.H))
+            if ((input.Player.Jump.ReadValue<float>() == 0) && rb.velocity.y > 0f)
             {
-                playerHealth -= 1;
-                hearts[playerHealth].SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.J) && (playerHealth < 3))
-            {
-                hearts[playerHealth].SetActive(true);
-                playerHealth += 1;
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.6f);
             }
         }
-        else if (playerHealth <= 0)
+        else if (playerHealth <= 0f)
         {
-            playerHealth = 0;
+            playerHealth = 0f;
             SceneManager.LoadScene("Game Over");
+        }
+    }
+
+    private void VelocityX(int direction, bool grounded) {
+        if (Input.GetAxisRaw("Horizontal") == 0) {
+            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, 120f * Time.deltaTime), rb.velocity.y);
+        }
+        else {
+            if (grounded == true) {
+                rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, move_speed * direction, 75f * Time.deltaTime), rb.velocity.y);
+            }
+            else {
+                rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, move_speed * 0.98f * direction, 75f * Time.deltaTime), rb.velocity.y);
+            }
         }
     }
 
@@ -86,8 +92,7 @@ public class Player_Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
         {
-            playerHealth -= 1;
-            hearts[playerHealth].SetActive(false);
+            playerHealth -= 10f;
             iFrames = true;
             Invoke("RemoveIFrames", 1.5f);
         }
@@ -132,8 +137,7 @@ public class Player_Controller : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
         {
-            playerHealth -= 1;
-            hearts[playerHealth].SetActive(false);
+            playerHealth -= 10f;
             iFrames = true;
             Invoke("RemoveIFrames", 1.5f);
         }
