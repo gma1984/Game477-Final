@@ -55,33 +55,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Unplug_Slot_1"",
-                    ""type"": ""Value"",
-                    ""id"": ""68682353-5a15-4d16-9b0f-1e4a980dd884"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Unplug_Slot_2"",
-                    ""type"": ""Value"",
-                    ""id"": ""7ece79d6-fcf1-48a2-ac85-302346f6ee3b"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Unplug_Slot_3"",
-                    ""type"": ""Value"",
-                    ""id"": ""ffa600db-3a02-4a12-85b8-40ad85a3cefd"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
                     ""name"": ""Plug_Red"",
                     ""type"": ""Value"",
                     ""id"": ""171f0acb-02fd-4cce-bc2e-cde3d84eac2d"",
@@ -123,11 +96,33 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""81b64d8e-bb26-43ee-b85e-0cf04cc1f45f"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""3623ab17-2657-40c3-85aa-3cda4771c9cf"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
+                    ""action"": ""Move_Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b152fd4b-4e21-4277-9f7c-84055a984ffb"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""Move_Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -145,34 +140,23 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6b694a4e-fdb3-475c-9750-e0b74161d436"",
-                    ""path"": ""<Keyboard>/z"",
+                    ""id"": ""4cdb4b57-afaf-453c-aa20-5c3183fa7395"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Unplug_Slot_1"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f2d15f33-b684-4b5a-9ff5-ba89689cb42c"",
-                    ""path"": ""<Keyboard>/x"",
+                    ""id"": ""95248264-ceee-4c81-b49e-59009a72b2a6"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Unplug_Slot_2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""caace9bc-7dfe-4350-98ff-593b5e195cfb"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Unplug_Slot_3"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -180,6 +164,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""c2ce27c0-bb3a-40b2-a131-764018f4a7ef"",
                     ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Plug_Red"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e18775ed-9f55-4e29-934b-71ebf0f60aa3"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Plug_Red"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6bf4f8e7-04d7-465e-85f2-2dfc426839ce"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -280,9 +286,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Move_Left = m_Player.FindAction("Move_Left", throwIfNotFound: true);
         m_Player_Move_Right = m_Player.FindAction("Move_Right", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Unplug_Slot_1 = m_Player.FindAction("Unplug_Slot_1", throwIfNotFound: true);
-        m_Player_Unplug_Slot_2 = m_Player.FindAction("Unplug_Slot_2", throwIfNotFound: true);
-        m_Player_Unplug_Slot_3 = m_Player.FindAction("Unplug_Slot_3", throwIfNotFound: true);
         m_Player_Plug_Red = m_Player.FindAction("Plug_Red", throwIfNotFound: true);
         m_Player_Plug_Green = m_Player.FindAction("Plug_Green", throwIfNotFound: true);
         m_Player_Plug_Blue = m_Player.FindAction("Plug_Blue", throwIfNotFound: true);
@@ -355,9 +358,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move_Left;
     private readonly InputAction m_Player_Move_Right;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Unplug_Slot_1;
-    private readonly InputAction m_Player_Unplug_Slot_2;
-    private readonly InputAction m_Player_Unplug_Slot_3;
     private readonly InputAction m_Player_Plug_Red;
     private readonly InputAction m_Player_Plug_Green;
     private readonly InputAction m_Player_Plug_Blue;
@@ -368,9 +368,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @Move_Left => m_Wrapper.m_Player_Move_Left;
         public InputAction @Move_Right => m_Wrapper.m_Player_Move_Right;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Unplug_Slot_1 => m_Wrapper.m_Player_Unplug_Slot_1;
-        public InputAction @Unplug_Slot_2 => m_Wrapper.m_Player_Unplug_Slot_2;
-        public InputAction @Unplug_Slot_3 => m_Wrapper.m_Player_Unplug_Slot_3;
         public InputAction @Plug_Red => m_Wrapper.m_Player_Plug_Red;
         public InputAction @Plug_Green => m_Wrapper.m_Player_Plug_Green;
         public InputAction @Plug_Blue => m_Wrapper.m_Player_Plug_Blue;
@@ -392,15 +389,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
-            @Unplug_Slot_1.started += instance.OnUnplug_Slot_1;
-            @Unplug_Slot_1.performed += instance.OnUnplug_Slot_1;
-            @Unplug_Slot_1.canceled += instance.OnUnplug_Slot_1;
-            @Unplug_Slot_2.started += instance.OnUnplug_Slot_2;
-            @Unplug_Slot_2.performed += instance.OnUnplug_Slot_2;
-            @Unplug_Slot_2.canceled += instance.OnUnplug_Slot_2;
-            @Unplug_Slot_3.started += instance.OnUnplug_Slot_3;
-            @Unplug_Slot_3.performed += instance.OnUnplug_Slot_3;
-            @Unplug_Slot_3.canceled += instance.OnUnplug_Slot_3;
             @Plug_Red.started += instance.OnPlug_Red;
             @Plug_Red.performed += instance.OnPlug_Red;
             @Plug_Red.canceled += instance.OnPlug_Red;
@@ -423,15 +411,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
-            @Unplug_Slot_1.started -= instance.OnUnplug_Slot_1;
-            @Unplug_Slot_1.performed -= instance.OnUnplug_Slot_1;
-            @Unplug_Slot_1.canceled -= instance.OnUnplug_Slot_1;
-            @Unplug_Slot_2.started -= instance.OnUnplug_Slot_2;
-            @Unplug_Slot_2.performed -= instance.OnUnplug_Slot_2;
-            @Unplug_Slot_2.canceled -= instance.OnUnplug_Slot_2;
-            @Unplug_Slot_3.started -= instance.OnUnplug_Slot_3;
-            @Unplug_Slot_3.performed -= instance.OnUnplug_Slot_3;
-            @Unplug_Slot_3.canceled -= instance.OnUnplug_Slot_3;
             @Plug_Red.started -= instance.OnPlug_Red;
             @Plug_Red.performed -= instance.OnPlug_Red;
             @Plug_Red.canceled -= instance.OnPlug_Red;
@@ -508,9 +487,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnMove_Left(InputAction.CallbackContext context);
         void OnMove_Right(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnUnplug_Slot_1(InputAction.CallbackContext context);
-        void OnUnplug_Slot_2(InputAction.CallbackContext context);
-        void OnUnplug_Slot_3(InputAction.CallbackContext context);
         void OnPlug_Red(InputAction.CallbackContext context);
         void OnPlug_Green(InputAction.CallbackContext context);
         void OnPlug_Blue(InputAction.CallbackContext context);
