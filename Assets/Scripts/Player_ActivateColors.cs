@@ -152,74 +152,74 @@ public class Player_ActivateColors : MonoBehaviour
     #region State Stay Methods
     private void StateStay_None()
     {
-        if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree && red && green && blue)
+        if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portThree && red && green && blue)
         {
             ChangeState(State.White);
         }
-        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G)) || Input.GetKeyDown(KeyCode.Alpha1)) && portTwo && red && green)
+        else if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8))) && portTwo && red && green)
         {
             ChangeState(State.Yellow);
         }
-        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha2)) && portTwo && red && blue)
+        else if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portTwo && red && blue)
         {
             ChangeState(State.Magenta);
         }
-        else if (((Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha3)) && portTwo && green && blue)
+        else if (((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portTwo && green && blue)
         {
             ChangeState(State.Cyan);
         }
-        else if (Input.GetKeyDown(KeyCode.R) && red && portOne)
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && red && portOne)
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.G) && green && portOne)
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && green && portOne)
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.B) && blue && portOne)
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && blue && portOne)
         {
             ChangeState(State.Blue);
         }
     }
     private void StateStay_Red()
     {
-        if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) && portTwo)
+        if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portTwo)
         {
             ChangeState(State.Cyan);
         } 
-        else if (Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && green)
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && green)
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B) && blue)
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && blue)
         {
             ChangeState(State.Blue);
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.None);
         }
-        else if (((Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree)
+        else if (((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portThree)
         {
             ChangeState(State.White);
         }
-        else if (((Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha3)) && portTwo)
+        else if (((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portTwo)
         {
             ChangeState(State.Cyan);
         }
-        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Alpha1)) && portTwo)
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && portTwo)
         {
             ChangeState(State.Yellow);
         }
-        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Alpha2)) && portTwo)
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && portTwo)
         {
             ChangeState(State.Magenta);
         }
-        else if (Input.GetKeyDown(KeyCode.G) && green)
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && green)
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.B) && blue)
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && blue)
         {
             ChangeState(State.Blue);
         }
@@ -230,43 +230,43 @@ public class Player_ActivateColors : MonoBehaviour
     }
     private void StateStay_Green()
     {
-        if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) && portTwo)
+        if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portTwo)
         {
             ChangeState(State.Magenta);
         } 
-        else if (Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.R))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B) && blue)
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && blue)
         {
             ChangeState(State.Blue);
         }
-        else if (Input.GetKeyDown(KeyCode.G))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.None);
         }
-        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree)
+        else if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portThree)
         {
             ChangeState(State.White);
         }
-        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha2)) && portTwo)
+        else if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portTwo)
         {
             ChangeState(State.Magenta);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Alpha1)) && portTwo)
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && portTwo)
         {
             ChangeState(State.Yellow);
         }
-        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Alpha3)) && portTwo)
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && portTwo)
         {
             ChangeState(State.Cyan);
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.B) && blue)
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && blue)
         {
             ChangeState(State.Blue);
         }
@@ -277,43 +277,43 @@ public class Player_ActivateColors : MonoBehaviour
     }
     private void StateStay_Blue()
     {
-        if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) && portTwo)
+        if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9))) && portTwo)
         {
             ChangeState(State.Yellow);
         } 
-        else if (Input.GetKeyDown(KeyCode.B) && Input.GetKeyDown(KeyCode.R))
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.B) && Input.GetKeyDown(KeyCode.G))
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.None);
         }
-        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G)) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree)
+        else if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8))) && portThree)
         {
             ChangeState(State.White);
         }
-        else if (((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G)) || Input.GetKeyDown(KeyCode.Alpha1)) && portTwo)
+        else if (((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8))) && portTwo)
         {
             ChangeState(State.Yellow);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Alpha2)) && portTwo)
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && portTwo)
         {
             ChangeState(State.Magenta);
         }
-        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Alpha3)) && portTwo)
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && portTwo)
         {
             ChangeState(State.Cyan);
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.G))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Green);
         }
@@ -324,35 +324,35 @@ public class Player_ActivateColors : MonoBehaviour
     }
     private void StateStay_Yellow()
     {
-        if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)))
+        if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Blue);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G)) || Input.GetKeyDown(KeyCode.Alpha1))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.None);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha3))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Cyan);
         }
-        else if ((Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha2))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Magenta);
         }
-        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree)
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)) && portThree)
         {
             ChangeState(State.White);
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.G))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Blue);
         }
@@ -363,35 +363,35 @@ public class Player_ActivateColors : MonoBehaviour
     }
     private void StateStay_Magenta()
     {
-        if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) )
+        if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Green);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha2))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.None);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G)) || Input.GetKeyDown(KeyCode.Alpha3))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Cyan);
         }
-        else if ((Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha1))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Yellow);
         }
-        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree)
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && portThree)
         {
             ChangeState(State.White);
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.Blue);
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.G))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Green);
         }
@@ -402,35 +402,35 @@ public class Player_ActivateColors : MonoBehaviour
     }
     private void StateStay_Cyan()
     {
-        if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)))
+        if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Red);
         }
-        else if ((Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha3))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.None);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G)) || Input.GetKeyDown(KeyCode.Alpha2))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Magenta);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha1))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Yellow);
         }
-        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Alpha4)) && portThree)
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && portThree)
         {
             ChangeState(State.White);
         }
-        else if (Input.GetKeyDown(KeyCode.G))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Blue);
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.Red);
         }
@@ -441,31 +441,31 @@ public class Player_ActivateColors : MonoBehaviour
     }
     private void StateStay_White()
     {
-        if ((Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B)) || Input.GetKeyDown(KeyCode.Alpha4))
+        if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.None);
         }
-        else if (Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.G))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Blue);
         }
-        else if (Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.B))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.B))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)) && (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Alpha1))
+        else if ((Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad9)))
         {
             ChangeState(State.Yellow);
         }
-        else if (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Alpha2))
+        else if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad8)))
         {
             ChangeState(State.Magenta);
         }
-        else if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Alpha3))
+        else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad7)))
         {
             ChangeState(State.Cyan);
         }
