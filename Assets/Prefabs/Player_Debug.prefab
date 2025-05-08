@@ -184,7 +184,6 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckDistance: 0.1
   playerHealth: 100
-  hearts: []
   iFrames: 0
 --- !u!1 &7197469926313821913
 GameObject:
