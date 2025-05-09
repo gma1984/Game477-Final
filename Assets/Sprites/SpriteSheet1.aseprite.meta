@@ -143,18 +143,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: UnactivePlatform
+  - name: PlatformTemplateActive
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 5, y: 3, z: 4, w: 3}
+    border: {x: 3, y: 3, z: 3, w: 3}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
+      x: 52
+      y: 68
       width: 18
       height: 18
-    spriteID: df759bc5cb9474f7ba16601c7e5c3d6b
+    spriteID: d676785462b8445d2bfcde2096858903
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -163,7 +163,187 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: ActivePlatform
+  - name: PlatformTemplateInactive
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 68
+      width: 18
+      height: 18
+    spriteID: bbd8b2709f74d496d8cbe800969cd0cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: RedActivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 36
+      width: 18
+      height: 18
+    spriteID: db71a3c4668c54540b9ad0397a4ceea9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: WhiteInactivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 6, y: 6, z: 6, w: 6}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 36
+      width: 18
+      height: 18
+    spriteID: 7188154b03787488b93cc1c912d02b40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GreenInactivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 5, z: 3, w: 4}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 36
+      width: 18
+      height: 18
+    spriteID: 7ff113b0d66a54335917170e12f9dc81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: BlueInactivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 4}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 36
+      width: 18
+      height: 18
+    spriteID: f6edfc13ce5204ae3928eb8ede31efbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: YellowInactivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 5, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 36
+      width: 18
+      height: 18
+    spriteID: 4c73788465c1f48d2a8d6366d66566d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: CyanInactivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 36
+      width: 18
+      height: 18
+    spriteID: 399ce6e206b134e42850999cb9d11c85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: MagentaInactivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 36
+      width: 18
+      height: 18
+    spriteID: c27e44f1a4afc4cb2b6829fc08646daf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: RedInactivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 18
+      height: 18
+    spriteID: b42136b96b490418ea5535d772de8fe9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: WhiteActivePlatform
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -174,7 +354,107 @@ ScriptedImporter:
       y: 4
       width: 18
       height: 18
-    spriteID: 7bd4fd16ebaee425ea697443ee25e508
+    spriteID: ee2c395b0622f4575a88e8e983a7ee5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GreenActivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 5, z: 3, w: 4}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 4
+      width: 18
+      height: 18
+    spriteID: 9e26dad6ca81d4ace96abbb42db44e21
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: BlueActivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 4}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 4
+      width: 18
+      height: 18
+    spriteID: fe75e2b75b2dc4419bdf9be73cad2d9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: YellowActivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 5, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 4
+      width: 18
+      height: 18
+    spriteID: 90251e0493bd941379fde0a55fca0856
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: CyanActivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 4
+      width: 18
+      height: 18
+    spriteID: 463201ceafa6e4b998ad763e355cd34e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: MagentaActivePlatform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 3, y: 3, z: 3, w: 3}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 4
+      width: 18
+      height: 18
+    spriteID: 5263fe0a12e35489ba01b046b42712f2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -202,8 +482,8 @@ ScriptedImporter:
       cellRect:
         x: 31
         y: 19
-        width: 50
-        height: 18
+        width: 210
+        height: 82
       spriteId: a0d231a6c443b4fde8144deb77ee3f54
     linkedCells: []
     parentIndex: -1
@@ -272,4 +552,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 320, y: 180}
-  previousTextureSize: {x: 64, y: 32}
+  previousTextureSize: {x: 256, y: 128}
