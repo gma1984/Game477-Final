@@ -18,11 +18,12 @@ public class Player_Controller : MonoBehaviour
     public Transform groundSensor;
     public LayerMask groundCheckLayerMask;
     public float groundCheckDistance = 0.1f;
-    public float playerHealth = 100f;
+    public int playerHealth = 3;
     public bool iFrames = false;
     private bool isJumping = false;
     private int dir = 0;
     private Rigidbody rigid;
+    public GameObject[] hearts;
 
     // Start is called before the first frame update
     void Start()
@@ -33,18 +34,31 @@ public class Player_Controller : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
     	jump = new Vector3(0.0f, 6.0f, 0.0f);
-        playerHealth = 100f;
+        playerHealth = 3;
     }
 
     // Update is called once per frame
     void Update()
     {   
-        if (playerHealth >= 100f)
+        if (playerHealth >= 3)
         {
-            playerHealth = 100f;
+            playerHealth = 3;
         }
-        if (playerHealth > 0f)
+        if (playerHealth > 0)
         {
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                if (playerHealth <= 2)
+                {
+                    hearts[playerHealth].SetActive(true);
+                }
+                playerHealth += 1;
+            }
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                playerHealth -= 1;
+                hearts[playerHealth].SetActive(false);
+            }
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
                 sr.flipX = true;
@@ -70,9 +84,10 @@ public class Player_Controller : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.95f);
             }
         }
-        else if (playerHealth <= 0f)
+        else if (playerHealth <= 0)
         {
-            playerHealth = 0f;
+            playerHealth = 0;
+            input.Disable();
             SceneManager.LoadScene("Game Over");
         }
     }
@@ -95,7 +110,8 @@ public class Player_Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
         {
-            playerHealth -= 10f;
+            playerHealth -= 1;
+            hearts[playerHealth].SetActive(false);
             iFrames = true;
             Invoke("RemoveIFrames", 1.5f);
         }
@@ -140,7 +156,8 @@ public class Player_Controller : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
         {
-            playerHealth -= 10f;
+            playerHealth -= 1;
+            hearts[playerHealth].SetActive(false);
             iFrames = true;
             Invoke("RemoveIFrames", 1.5f);
         }
