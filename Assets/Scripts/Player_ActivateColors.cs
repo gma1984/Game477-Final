@@ -16,6 +16,13 @@ public class Player_ActivateColors : MonoBehaviour
     public GameObject magentaSignal;
     public GameObject cyanSignal;
     public GameObject whiteSignal;
+    public GameObject redIndicator;
+    public GameObject greenIndicator;
+    public GameObject blueIndicator;
+    public GameObject yellowIndicator;
+    public GameObject magentaIndicator;
+    public GameObject cyanIndicator;
+    public GameObject whiteIndicator;
     public bool red = false;
     public bool green = false;
     public bool blue = false;
@@ -76,6 +83,14 @@ public class Player_ActivateColors : MonoBehaviour
         magentaSignal.SetActive(false);
         cyanSignal.SetActive(false);
         whiteSignal.SetActive(false);
+
+        redIndicator.SetActive(false);
+        greenIndicator.SetActive(false);
+        blueIndicator.SetActive(false);
+        yellowIndicator.SetActive(false);
+        magentaIndicator.SetActive(false);
+        cyanIndicator.SetActive(false);
+        whiteIndicator.SetActive(false);
     }
     private void StateEnter_Red()
     {
@@ -86,6 +101,14 @@ public class Player_ActivateColors : MonoBehaviour
         magentaSignal.SetActive(false);
         cyanSignal.SetActive(false);
         whiteSignal.SetActive(false);
+
+        redIndicator.SetActive(true);
+        greenIndicator.SetActive(false);
+        blueIndicator.SetActive(false);
+        yellowIndicator.SetActive(false);
+        magentaIndicator.SetActive(false);
+        cyanIndicator.SetActive(false);
+        whiteIndicator.SetActive(false);
     }
     private void StateEnter_Green()
     {
@@ -96,6 +119,14 @@ public class Player_ActivateColors : MonoBehaviour
         magentaSignal.SetActive(false);
         cyanSignal.SetActive(false);
         whiteSignal.SetActive(false);
+
+        redIndicator.SetActive(false);
+        greenIndicator.SetActive(true);
+        blueIndicator.SetActive(false);
+        yellowIndicator.SetActive(false);
+        magentaIndicator.SetActive(false);
+        cyanIndicator.SetActive(false);
+        whiteIndicator.SetActive(false);
     }
     private void StateEnter_Blue()
     {
@@ -106,6 +137,14 @@ public class Player_ActivateColors : MonoBehaviour
         magentaSignal.SetActive(false);
         cyanSignal.SetActive(false);
         whiteSignal.SetActive(false);
+
+        redIndicator.SetActive(false);
+        greenIndicator.SetActive(false);
+        blueIndicator.SetActive(true);
+        yellowIndicator.SetActive(false);
+        magentaIndicator.SetActive(false);
+        cyanIndicator.SetActive(false);
+        whiteIndicator.SetActive(false);
     }
     private void StateEnter_Yellow()
     {
@@ -116,6 +155,14 @@ public class Player_ActivateColors : MonoBehaviour
         magentaSignal.SetActive(false);
         cyanSignal.SetActive(false);
         whiteSignal.SetActive(false);
+
+        redIndicator.SetActive(true);
+        greenIndicator.SetActive(true);
+        blueIndicator.SetActive(false);
+        yellowIndicator.SetActive(true);
+        magentaIndicator.SetActive(false);
+        cyanIndicator.SetActive(false);
+        whiteIndicator.SetActive(false);
     }
     private void StateEnter_Magenta()
     {
@@ -126,6 +173,14 @@ public class Player_ActivateColors : MonoBehaviour
         magentaSignal.SetActive(true);
         cyanSignal.SetActive(false);
         whiteSignal.SetActive(false);
+
+        redIndicator.SetActive(true);
+        greenIndicator.SetActive(false);
+        blueIndicator.SetActive(true);
+        yellowIndicator.SetActive(false);
+        magentaIndicator.SetActive(true);
+        cyanIndicator.SetActive(false);
+        whiteIndicator.SetActive(false);
     }
     private void StateEnter_Cyan()
     {
@@ -136,6 +191,14 @@ public class Player_ActivateColors : MonoBehaviour
         magentaSignal.SetActive(false);
         cyanSignal.SetActive(true);
         whiteSignal.SetActive(false);
+
+        redIndicator.SetActive(false);
+        greenIndicator.SetActive(true);
+        blueIndicator.SetActive(true);
+        yellowIndicator.SetActive(false);
+        magentaIndicator.SetActive(false);
+        cyanIndicator.SetActive(true);
+        whiteIndicator.SetActive(false);
     }
     private void StateEnter_White()
     {
@@ -146,6 +209,14 @@ public class Player_ActivateColors : MonoBehaviour
         magentaSignal.SetActive(false);
         cyanSignal.SetActive(false);
         whiteSignal.SetActive(true);
+
+        redIndicator.SetActive(true);
+        greenIndicator.SetActive(true);
+        blueIndicator.SetActive(true);
+        yellowIndicator.SetActive(true);
+        magentaIndicator.SetActive(true);
+        cyanIndicator.SetActive(true);
+        whiteIndicator.SetActive(true);
     }
     #endregion
 
