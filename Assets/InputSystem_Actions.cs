@@ -122,7 +122,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Gamepad"",
+                    ""groups"": """",
                     ""action"": ""Move_Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
