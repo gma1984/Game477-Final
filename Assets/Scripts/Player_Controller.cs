@@ -20,9 +20,11 @@ public class Player_Controller : MonoBehaviour
     public float groundCheckDistance = 0.1f;
     public float playerHealth = 100f;
     public bool iFrames = false;
-    private bool isJumping;
+    private bool isJumping = false;
     private int dir = 0;
     private Rigidbody rigid;
+    public bool isPaused = false;
+    public GameObject pause;
 
     // Start is called before the first frame update
     void Start()
@@ -38,16 +40,20 @@ public class Player_Controller : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+    {   
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
         {
-            sr.flipX = true;
-            dir = -1;
+            isPaused = true;
+            Time.timeScale = 0;
+            pause.SetActive(true);
+            input.Disable();
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        else if(Input.GetKeyDown(KeyCode.Escape) && isPaused)
         {
-            sr.flipX = false;
-            dir = 1;
+            isPaused = false;
+            Time.timeScale = 1;
+            pause.SetActive(false);
+            input.Enable();
         }
         if (playerHealth >= 100f)
         {
@@ -55,6 +61,16 @@ public class Player_Controller : MonoBehaviour
         }
         if (playerHealth > 0f)
         {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            {
+                sr.flipX = true;
+                dir = -1;
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            {
+                sr.flipX = false;
+                dir = 1;
+            }
             isGrounded = RaycastFromSensor(groundSensor);
             VelocityX(dir, isGrounded);
 
