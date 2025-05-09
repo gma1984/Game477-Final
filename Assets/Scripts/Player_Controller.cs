@@ -20,6 +20,7 @@ public class Player_Controller : MonoBehaviour
     public float groundCheckDistance = 0.1f;
     public float playerHealth = 100f;
     public bool iFrames = false;
+    private bool isJumping;
     private int dir = 0;
     private Rigidbody rigid;
 
@@ -38,12 +39,12 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             sr.flipX = true;
             dir = -1;
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             sr.flipX = false;
             dir = 1;
@@ -59,12 +60,14 @@ public class Player_Controller : MonoBehaviour
 
             if((input.Player.Jump.ReadValue<float>() != 0) && isGrounded)
             {
-                rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
+                isJumping = true;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                Invoke("NoJump", 0.1f);
                 //rb.AddForce(Vector3.up * jumpForce);
             }
-            if ((input.Player.Jump.ReadValue<float>() == 0) && rb.velocity.y > 0f)
+            if ((input.Player.Jump.ReadValue<float>() == 0) && rb.velocity.y > 0f && !isJumping)
             {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.6f);
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.95f);
             }
         }
         else if (playerHealth <= 0f)
@@ -164,5 +167,10 @@ public class Player_Controller : MonoBehaviour
     private void RemoveIFrames()
     {
         iFrames = false;
+    }
+
+    private void NoJump()
+    {
+        isJumping = false;
     }
 }
