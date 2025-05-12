@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6174417996315065052}
   - component: {fileID: 3605854778808606884}
   - component: {fileID: 4075298966271768198}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kill Barrier
   m_TagString: Kill Barrier
   m_Icon: {fileID: 0}
