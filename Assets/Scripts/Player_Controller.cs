@@ -154,7 +154,7 @@ public class Player_Controller : MonoBehaviour
             ColorScript.portThree = true;
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
+        if (((collision.gameObject.CompareTag("BasicEnemy") && !iFrames) || (collision.gameObject.CompareTag("Kill Barrier") && !iFrames)))
         {
             playerHealth -= 1;
             hearts[playerHealth].SetActive(false);

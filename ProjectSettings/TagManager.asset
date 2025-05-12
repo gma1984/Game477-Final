@@ -21,6 +21,7 @@ TagManager:
   - Port1
   - Port2
   - Port3
+  - Kill Barrier
   layers:
   - Default
   - TransparentFX
