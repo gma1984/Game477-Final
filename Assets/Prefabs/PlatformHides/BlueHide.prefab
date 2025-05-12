@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4834376767107282383}
   - component: {fileID: 5115511275261199267}
   - component: {fileID: 3233046028652946594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Active
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.000000029802322, y: 0.0022788346}
   m_SpriteTilingProperty:
-    border: {x: 0.09375, y: 0.09375, z: 0.09375, w: 0.125}
+    border: {x: 0.09375, y: 0.15625, z: 0.09375, w: 0.1875}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5625, y: 0.5625}
     newSize: {x: 0.5625, y: 0.5625}
@@ -283,7 +283,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.0022788793, y: 0.0022788346}
   m_SpriteTilingProperty:
-    border: {x: 0.09375, y: 0.09375, z: 0.09375, w: 0.125}
+    border: {x: 0.09375, y: 0.15625, z: 0.09375, w: 0.1875}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5625, y: 0.5625}
     newSize: {x: 0.5625, y: 0.5625}
