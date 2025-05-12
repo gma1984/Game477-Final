@@ -136,37 +136,37 @@ public class Player_Controller : MonoBehaviour
         {
             ColorScript.red = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(3000f);
+            Score.Instance.AddToScore(2500f);
         }
         if (collision.gameObject.CompareTag("PlugG"))
         {
             ColorScript.green = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(3000f);
+            Score.Instance.AddToScore(2500f);
         }
         if (collision.gameObject.CompareTag("PlugB"))
         {
             ColorScript.blue = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(3000f);
+            Score.Instance.AddToScore(2500f);
         }
         if (collision.gameObject.CompareTag("Port1"))
         {
             ColorScript.portOne = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(3000f);
+            Score.Instance.AddToScore(2500f);
         }
         if (collision.gameObject.CompareTag("Port2"))
         {
             ColorScript.portTwo = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(3000f);
+            Score.Instance.AddToScore(2500f);
         }
         if (collision.gameObject.CompareTag("Port3"))
         {
             ColorScript.portThree = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(3000f);
+            Score.Instance.AddToScore(2500f);
         }
         if (((collision.gameObject.CompareTag("BasicEnemy") && !iFrames) || (collision.gameObject.CompareTag("Kill Barrier") && !iFrames)))
         {
