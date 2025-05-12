@@ -16,6 +16,7 @@ public class Player_ActivateColors : MonoBehaviour
     public GameObject magentaSignal;
     public GameObject cyanSignal;
     public GameObject whiteSignal;
+    public GameObject colorWheel;
     public GameObject redIndicator;
     public GameObject greenIndicator;
     public GameObject blueIndicator;
@@ -62,6 +63,10 @@ public class Player_ActivateColors : MonoBehaviour
     void Update()
     {
         stateStayMethods[State]();
+        if (portOne == true)
+        {
+            colorWheel.SetActive(true);
+        }
     }
 
     private void ChangeState(State newState) {
