@@ -46,7 +46,7 @@ public class Player_Controller : MonoBehaviour
         }
         if (playerHealth > 0)
         {
-            if (Input.GetKeyDown(KeyCode.H))
+            /*if (Input.GetKeyDown(KeyCode.H))
             {
                 if (playerHealth <= 2)
                 {
@@ -58,6 +58,13 @@ public class Player_Controller : MonoBehaviour
             {
                 playerHealth -= 1;
                 hearts[playerHealth].SetActive(false);
+            }*/
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                input.Disable();
+                Score.Instance.timerStop();
+                Score.Instance.addTimeScore();
+                SceneManager.LoadScene("Game Win");
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
@@ -88,6 +95,7 @@ public class Player_Controller : MonoBehaviour
         {
             playerHealth = 0;
             input.Disable();
+            Score.Instance.timerStop();
             SceneManager.LoadScene("Game Over");
         }
     }
@@ -128,31 +136,37 @@ public class Player_Controller : MonoBehaviour
         {
             ColorScript.red = true;
             Destroy(collision.gameObject);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("PlugG"))
         {
             ColorScript.green = true;
             Destroy(collision.gameObject);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("PlugB"))
         {
             ColorScript.blue = true;
             Destroy(collision.gameObject);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("Port1"))
         {
             ColorScript.portOne = true;
             Destroy(collision.gameObject);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("Port2"))
         {
             ColorScript.portTwo = true;
             Destroy(collision.gameObject);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("Port3"))
         {
             ColorScript.portThree = true;
             Destroy(collision.gameObject);
+            Score.Instance.AddToScore(3000f);
         }
         if (((collision.gameObject.CompareTag("BasicEnemy") && !iFrames) || (collision.gameObject.CompareTag("Kill Barrier") && !iFrames)))
         {
@@ -161,6 +175,13 @@ public class Player_Controller : MonoBehaviour
             iFrames = true;
             Invoke("RemoveIFrames", 1.5f);
         }
+        /*if (collision.gameObject.CompareTag("WinZone"))
+        {
+            Score.Instance.AddToScore(15000f);
+            Score.Instance.timerStop();
+            Score.Instance.addTimeScore();
+            SceneManager.LoadScene("Game Win");
+        }*/
     }
 
     public bool RaycastFromSensor(Transform groundSensor)

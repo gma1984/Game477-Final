@@ -22,6 +22,7 @@ TagManager:
   - Port2
   - Port3
   - Kill Barrier
+  - WinZone
   layers:
   - Default
   - TransparentFX
