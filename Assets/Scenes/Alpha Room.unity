@@ -765,7 +765,7 @@ PrefabInstance:
       objectReference: {fileID: 596181557}
     - target: {fileID: 8682258784348728350, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_GravityScale
-      value: 2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 9015740534800469542, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: pause
@@ -773,8 +773,16 @@ PrefabInstance:
       objectReference: {fileID: 1666869165}
     - target: {fileID: 9015740534800469542, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: jumpForce
-      value: 14
+      value: 13.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9015740534800469542, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: groundSensor2
+      value: 
+      objectReference: {fileID: 653809465}
+    - target: {fileID: 9015740534800469542, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: groundSensor3
+      value: 
+      objectReference: {fileID: 653809464}
     - target: {fileID: 9015740534800469542, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: hearts.Array.size
       value: 3
@@ -805,6 +813,16 @@ PrefabInstance:
 --- !u!1 &653809463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 600846800171700924, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+  m_PrefabInstance: {fileID: 653809462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &653809464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5905540868922810165, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+  m_PrefabInstance: {fileID: 653809462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &653809465 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3879959234127123000, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
   m_PrefabInstance: {fileID: 653809462}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &656078335

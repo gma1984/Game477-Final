@@ -16,14 +16,20 @@ public class Player_Controller : MonoBehaviour
     SpriteRenderer sr;
     public Player_ActivateColors ColorScript;
     public Transform groundSensor;
+    public Transform groundSensor2;
+    public Transform groundSensor3;
     public LayerMask groundCheckLayerMask;
-    public float groundCheckDistance = 0.1f;
+    public float groundCheckDistance;
     public int playerHealth = 3;
     public bool iFrames = false;
     private bool isJumping = false;
     private int dir = 0;
     private Rigidbody rigid;
     public GameObject[] hearts;
+
+    // coyote time and jump compensation
+    public float EdgeCompensation;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +39,13 @@ public class Player_Controller : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         rb = GetComponent<Rigidbody2D>();
-    	jump = new Vector3(0.0f, 6.0f, 0.0f);
+        jump = new Vector3(0.0f, 6.0f, 0.0f);
         playerHealth = 3;
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         if (playerHealth >= 3)
         {
             playerHealth = 3;
@@ -76,39 +82,59 @@ public class Player_Controller : MonoBehaviour
                 sr.flipX = false;
                 dir = 1;
             }
-            isGrounded = RaycastFromSensor(groundSensor);
+            isGrounded = RaycastFromSensor(groundSensor, groundSensor2, groundSensor3);
             VelocityX(dir, isGrounded);
 
-            if((input.Player.Jump.ReadValue<float>() != 0) && isGrounded)
+            if (isGrounded)
+            {
+                EdgeCompensation = 0.2f;
+            }
+            else
+            {
+                EdgeCompensation -= Time.deltaTime;
+            }
+
+
+
+
+            if ((input.Player.Jump.ReadValue<float>() != 0) && EdgeCompensation > 0f)
             {
                 isJumping = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 Invoke("NoJump", 0.1f);
                 //rb.AddForce(Vector3.up * jumpForce);
             }
+
+
             if ((input.Player.Jump.ReadValue<float>() == 0) && rb.velocity.y > 0f && !isJumping)
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.95f);
+                EdgeCompensation = EdgeCompensation -= Time.deltaTime;
+
             }
         }
         else if (playerHealth <= 0)
         {
             playerHealth = 0;
             input.Disable();
-            Score.Instance.timerStop();
             SceneManager.LoadScene("Game Over");
         }
     }
 
-    private void VelocityX(int direction, bool grounded) {
-        if (Input.GetAxisRaw("Horizontal") == 0) {
+    private void VelocityX(int direction, bool grounded)
+    {
+        if (Input.GetAxisRaw("Horizontal") == 0)
+        {
             rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, 120f * Time.deltaTime), rb.velocity.y);
         }
-        else {
-            if (grounded == true) {
+        else
+        {
+            if (grounded == true)
+            {
                 rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, move_speed * direction, 75f * Time.deltaTime), rb.velocity.y);
             }
-            else {
+            else
+            {
                 rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, move_speed * 0.98f * direction, 75f * Time.deltaTime), rb.velocity.y);
             }
         }
@@ -184,13 +210,15 @@ public class Player_Controller : MonoBehaviour
         }*/
     }
 
-    public bool RaycastFromSensor(Transform groundSensor)
+    public bool RaycastFromSensor(Transform groundSensor, Transform groundSensorTwo, Transform groundSensorThree)
     {
-        RaycastHit2D hit;
-        var position = groundSensor.position;
-        var forward = groundSensor.forward;
-        hit = Physics2D.Raycast(position, forward, groundCheckDistance, groundCheckLayerMask);
-        if (hit.collider != null)
+        RaycastHit2D hitOne;
+        RaycastHit2D hitTwo;
+        RaycastHit2D hitThree;
+        hitOne = Physics2D.Raycast(groundSensor.position, groundSensor.forward, groundCheckDistance, groundCheckLayerMask);
+        hitTwo = Physics2D.Raycast(groundSensorTwo.position, groundSensorTwo.forward, groundCheckDistance, groundCheckLayerMask);
+        hitThree = Physics2D.Raycast(groundSensorThree.position, groundSensorThree.forward, groundCheckDistance, groundCheckLayerMask);
+        if (hitOne.collider != null || hitTwo.collider != null || hitThree.collider != null)
         {
             return true;
         }
