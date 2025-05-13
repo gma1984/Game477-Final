@@ -26,7 +26,7 @@ public class StartGame : MonoBehaviour
     // Starts game
     public void LoadGame()
     {
-        SceneManager.LoadScene("Alpha Room");
+        SceneManager.LoadScene("Beta Room");
     }
     public void LoadCredits()
     {
