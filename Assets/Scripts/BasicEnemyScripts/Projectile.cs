@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("BulletExpire", 3f);
     }
 
     // Update is called once per frame
@@ -31,11 +31,8 @@ public class Projectile : MonoBehaviour
         return this;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void BulletExpire()
     {
-        if (collision.gameObject)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
