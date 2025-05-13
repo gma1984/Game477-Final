@@ -184,8 +184,8 @@ MonoBehaviour:
   ColorScript: {fileID: 7964678738438559386}
   CameraFollow: {fileID: 0}
   groundSensor: {fileID: 1718989996180357082}
-  groundSensor2: {fileID: 0}
-  groundSensor3: {fileID: 0}
+  groundSensor2: {fileID: 3879959234127123000}
+  groundSensor3: {fileID: 5905540868922810165}
   groundCheckLayerMask:
     serializedVersion: 2
     m_Bits: 64

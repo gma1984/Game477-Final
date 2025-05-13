@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 5471317287701962285}
   - component: {fileID: 5726268633496237276}
   - component: {fileID: 1685562216405596560}
+  - component: {fileID: 4870938997901958229}
   m_Layer: 6
   m_Name: Active
   m_TagString: BasicEnemy
@@ -306,7 +307,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.0015626699}
@@ -322,3 +323,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5655786, y: 0.5655786}
   m_EdgeRadius: 0
+--- !u!114 &4870938997901958229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019556022338206379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6300ee3e01e614ea00767452a6cc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullBullet: {fileID: 2280943978117854039}

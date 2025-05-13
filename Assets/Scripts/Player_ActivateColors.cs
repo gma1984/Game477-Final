@@ -299,7 +299,7 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Blue);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Keypad5)))
         {
             ChangeState(State.None);
         }
@@ -346,7 +346,7 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Blue);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Keypad5)))
         {
             ChangeState(State.None);
         }
@@ -393,7 +393,7 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Keypad5)))
         {
             ChangeState(State.None);
         }
@@ -432,7 +432,7 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Blue);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Keypad5)))
         {
             ChangeState(State.None);
         }
@@ -471,7 +471,7 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Green);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Keypad5)))
         {
             ChangeState(State.None);
         }
@@ -510,7 +510,7 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Red);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Keypad5)))
         {
             ChangeState(State.None);
         }
@@ -545,7 +545,7 @@ public class Player_ActivateColors : MonoBehaviour
         {
             ChangeState(State.Cyan);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Keypad5)))
         {
             ChangeState(State.None);
         }
