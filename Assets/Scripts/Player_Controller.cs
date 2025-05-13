@@ -189,14 +189,7 @@ public class Player_Controller : MonoBehaviour
             Destroy(collision.gameObject);
             Score.Instance.AddToScore(2500f);
         }
-        if (((collision.gameObject.CompareTag("BasicEnemy") && !iFrames)))
-        {
-            playerHealth -= 1;
-            hearts[playerHealth].SetActive(false);
-            iFrames = true;
-            Invoke("RemoveIFrames", 1.5f);
-        }
-        if (collision.gameObject.CompareTag("HealHeart"))
+        if (collision.gameObject.CompareTag("HealHeart") && playerHealth <= 2)
         {
             Destroy(collision.gameObject);
             if (playerHealth <= 2)
