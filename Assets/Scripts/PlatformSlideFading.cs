@@ -110,7 +110,8 @@ public class PlatformSlideFading : PlatformSlide
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         base.OnCollisionEnter2D(collision);
-        if (!fadeOverTime && !fading && collision.gameObject.tag == "Player")
+        var playerController = collision.gameObject.GetComponentInChildren<Player_Controller>();
+        if (!fadeOverTime && !fading && playerController != null)
         {
             fading = true;
         }
@@ -118,7 +119,8 @@ public class PlatformSlideFading : PlatformSlide
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "Player") return;
+        var playerController = collision.gameObject.GetComponentInChildren<Player_Controller>();
+        if (playerController == null) return;
 
         if (fadeOverTime)
         {

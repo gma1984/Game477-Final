@@ -95,9 +95,10 @@ public class PlatformSlide : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        var playerController = collision.gameObject.GetComponentInChildren<Player_Controller>();
+        if (playerController != null)
         {
-            bool onPlatform = true;//collision.gameObject.GetComponent<PlayerPhysics>().IsGroundedTo(GetComponentInChildren<Collider2D>());
+            bool onPlatform = playerController.isGrounded;//collision.gameObject.GetComponent<PlayerPhysics>().IsGroundedTo(GetComponentInChildren<Collider2D>());
 
             if (onPlatform)
             {
@@ -109,7 +110,8 @@ public class PlatformSlide : MonoBehaviour
 
     protected virtual void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        var playerController = collision.gameObject.GetComponentInChildren<Player_Controller>();
+        if (playerController != null)
         {
             collision.gameObject.transform.SetParent(null);
             player = null;
