@@ -417,7 +417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7474462144782518472
 Transform:
   m_ObjectHideFlags: 0
@@ -969,7 +969,6 @@ MonoBehaviour:
   controlsButton: {fileID: 3695791004548384014}
   resumeButton: {fileID: 8424314093692697409}
   quitButton: {fileID: 6190250895885154746}
-  pauseTracker: {fileID: 3523034972832239814}
 --- !u!1 &4227632240423030387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7064666486924317161
 RectTransform:
   m_ObjectHideFlags: 0

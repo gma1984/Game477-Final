@@ -9,7 +9,6 @@ public class Controls : MonoBehaviour
     public GameObject controlsButton;
     public GameObject resumeButton;
     public GameObject quitButton;
-    public StartGame pauseTracker;
 
     void Start()
     {
