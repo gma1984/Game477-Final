@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 21d3cac296b159f418c7ae01d9429b50
   - enabled: 1
-    path: Assets/Scenes/Alpha Room.unity
-    guid: 1bc155af47c9fd24180075b2c85c5940
+    path: Assets/Scenes/Beta Scene.unity
+    guid: ee31eb4f621e60c4aa6bed904ae494fe
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: ec5059fefd9ede040b88f2f7765e82d4

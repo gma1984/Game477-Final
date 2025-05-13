@@ -9,7 +9,7 @@ public class StartGame : MonoBehaviour
     // Starts game
     public void LoadGame()
     {
-        SceneManager.LoadScene("Beta Room");
+        SceneManager.LoadScene("Beta Scene");
     }
     public void LoadCredits()
     {
