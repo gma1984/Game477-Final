@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
     public bool isPaused;
-    public GameObject pauseMenu = null;
-    public bool GetIsPaused() { return isPaused; }
+    public GameObject pauseMenu;
+    public GameObject controls;
+    public GameObject controlsButton;
+    public GameObject resumeButton;
+    public GameObject quitButton;
 
     void Start()
     {
@@ -17,9 +20,13 @@ public class StartGame : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
         {
             PauseGame();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
+            UnpauseGame();
         }
     }
 
@@ -38,9 +45,18 @@ public class StartGame : MonoBehaviour
     }
     public void PauseGame()
     {
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0 : 1;
-        pauseMenu.SetActive(isPaused);
-
+        isPaused = true;
+        Time.timeScale = 0;
+        pauseMenu.SetActive(true);
+    }
+    public void UnpauseGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1;
+        controls.SetActive(false);
+        controlsButton.SetActive(true);
+        resumeButton.SetActive(true);
+        quitButton.SetActive(true);
+        pauseMenu.SetActive(false);
     }
 }
