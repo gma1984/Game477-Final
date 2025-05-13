@@ -161,6 +161,7 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("PlugR"))
         {
             ColorScript.red = true;
+            ColorScript.portOne = true;
             Destroy(collision.gameObject);
             Score.Instance.AddToScore(2500f);
         }
@@ -173,12 +174,6 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("PlugB"))
         {
             ColorScript.blue = true;
-            Destroy(collision.gameObject);
-            Score.Instance.AddToScore(2500f);
-        }
-        if (collision.gameObject.CompareTag("Port1"))
-        {
-            ColorScript.portOne = true;
             Destroy(collision.gameObject);
             Score.Instance.AddToScore(2500f);
         }
