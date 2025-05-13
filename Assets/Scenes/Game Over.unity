@@ -578,7 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -986,11 +986,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1007507819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928f84e8f2a414f4a93c39b0d9075f02, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d2be93f9a1b80140a67277e1da60329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
-  pauseMenu: {fileID: 0}
 --- !u!1 &1142957404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,11 +1132,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1142957404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928f84e8f2a414f4a93c39b0d9075f02, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d2be93f9a1b80140a67277e1da60329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
-  pauseMenu: {fileID: 0}
 --- !u!1 &1375449293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,7 +1471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
