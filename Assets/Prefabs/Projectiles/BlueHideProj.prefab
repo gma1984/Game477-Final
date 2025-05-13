@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4203171379139595663}
   m_Layer: 0
   m_Name: BlueHideProj
-  m_TagString: BasicEnemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.000000029802322, y: 0.0022788346}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 5191847995664140497}
   m_Layer: 0
   m_Name: Inactive
-  m_TagString: BasicEnemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
