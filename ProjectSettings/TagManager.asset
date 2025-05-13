@@ -23,6 +23,7 @@ TagManager:
   - Port3
   - Kill Barrier
   - WinZone
+  - HealHeart
   layers:
   - Default
   - TransparentFX

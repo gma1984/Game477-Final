@@ -52,7 +52,7 @@ public class Player_Controller : MonoBehaviour
         }
         if (playerHealth > 0)
         {
-            /*if (Input.GetKeyDown(KeyCode.H))
+            if (Input.GetKeyDown(KeyCode.H))
             {
                 if (playerHealth <= 2)
                 {
@@ -64,7 +64,7 @@ public class Player_Controller : MonoBehaviour
             {
                 playerHealth -= 1;
                 hearts[playerHealth].SetActive(false);
-            }*/
+            }
             if (Input.GetKeyDown(KeyCode.E))
             {
                 input.Disable();
@@ -201,13 +201,22 @@ public class Player_Controller : MonoBehaviour
             iFrames = true;
             Invoke("RemoveIFrames", 1.5f);
         }
-        /*if (collision.gameObject.CompareTag("WinZone"))
+        if (collision.gameObject.CompareTag("HealHeart"))
+        {
+            Destroy(collision.gameObject);
+            if (playerHealth <= 2)
+            {
+                hearts[playerHealth].SetActive(true);
+            }
+            playerHealth += 1;
+        }
+        if (collision.gameObject.CompareTag("WinZone"))
         {
             Score.Instance.AddToScore(15000f);
             Score.Instance.timerStop();
             Score.Instance.addTimeScore();
             SceneManager.LoadScene("Game Win");
-        }*/
+        }
     }
 
     public bool RaycastFromSensor(Transform groundSensor, Transform groundSensorTwo, Transform groundSensorThree)
