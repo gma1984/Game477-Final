@@ -143,31 +143,31 @@ public class Player_Controller : MonoBehaviour
             ColorScript.red = true;
             ColorScript.portOne = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(2500f);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("PlugG"))
         {
             ColorScript.green = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(2500f);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("PlugB"))
         {
             ColorScript.blue = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(2500f);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("Port2"))
         {
             ColorScript.portTwo = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(2500f);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("Port3"))
         {
             ColorScript.portThree = true;
             Destroy(collision.gameObject);
-            Score.Instance.AddToScore(2500f);
+            Score.Instance.AddToScore(3000f);
         }
         if (collision.gameObject.CompareTag("HealHeart") && playerHealth <= 2)
         {
