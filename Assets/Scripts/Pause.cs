@@ -6,17 +6,12 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     public bool isPaused;
+    public Player_Controller player;
     public GameObject pauseMenu;
     public GameObject controls;
     public GameObject controlsButton;
     public GameObject resumeButton;
     public GameObject quitButton;
-
-    void Start()
-    {
-        //Cursor.lockState = CursorLockMode.Confined;
-        //Cursor.visible = true;
-    }
 
     void Update()
     {
@@ -30,27 +25,20 @@ public class Pause : MonoBehaviour
         }
     }
 
-    // Starts game
-    public void LoadGame()
-    {
-        SceneManager.LoadScene("Beta Room");
-    }
-    public void LoadCredits()
-    {
-        SceneManager.LoadScene("Credits");
-    }
     public void LoadMenu()
     {
         SceneManager.LoadScene("Main Menu");
     }
     public void PauseGame()
     {
+        player.DisableInput();
         isPaused = true;
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
     }
     public void UnpauseGame()
     {
+        player.EnableInput();
         isPaused = false;
         Time.timeScale = 1;
         controls.SetActive(false);

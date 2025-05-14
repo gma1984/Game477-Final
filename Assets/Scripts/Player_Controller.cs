@@ -216,4 +216,14 @@ public class Player_Controller : MonoBehaviour
     {
         isJumping = false;
     }
+
+    public void EnableInput()
+    {
+        input.Enable();
+    }
+
+    public void DisableInput()
+    {
+        input.Disable();
+    }
 }

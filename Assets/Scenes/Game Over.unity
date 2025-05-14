@@ -1300,10 +1300,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1375449293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c880db0e9ee4dbd4d9bbd2ab30f9127c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b7d37f5dd1dd374fa26c1b95f43da4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtDisplayScore: {fileID: 882812279}
+  txtFinalScore: {fileID: 882812279}
+  score: {fileID: 0}
 --- !u!1 &1575013725
 GameObject:
   m_ObjectHideFlags: 0
