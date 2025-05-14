@@ -52,26 +52,6 @@ public class Player_Controller : MonoBehaviour
         }
         if (playerHealth > 0)
         {
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                if (playerHealth <= 2)
-                {
-                    hearts[playerHealth].SetActive(true);
-                }
-                playerHealth += 1;
-            }
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                playerHealth -= 1;
-                hearts[playerHealth].SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                input.Disable();
-                Score.Instance.timerStop();
-                Score.Instance.addTimeScore();
-                SceneManager.LoadScene("Game Win");
-            }
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
                 sr.flipX = true;
