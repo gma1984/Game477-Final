@@ -9,16 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 21d3cac296b159f418c7ae01d9429b50
   - enabled: 1
-    path: Assets/Scenes/Beta Scene.unity
-    guid: ee31eb4f621e60c4aa6bed904ae494fe
-  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: ec5059fefd9ede040b88f2f7765e82d4
+  - enabled: 1
+    path: Assets/Scenes/Beta Scene.unity
+    guid: ee31eb4f621e60c4aa6bed904ae494fe
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 165a73aebf3e3f849b702404c87d8aa6
   - enabled: 1
     path: Assets/Scenes/Game Win.unity
     guid: 6e311052032e84f4787305ce3cf48a1f
-  m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7569a9131f8d4f140b81bdcf2682c7e8, type: 3}
+  m_configObjects: {}
