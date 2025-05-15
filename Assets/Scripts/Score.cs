@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using HighScore;
 
 public class Score : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class Score : MonoBehaviour
     void Start()
     {
         score = 0;
+        HS.Init(this, "Randy Goes Bananas");
+        HS.SubmitHighScore(this, "Bob", (int)score);
     }
 
     // Update is called once per frame
