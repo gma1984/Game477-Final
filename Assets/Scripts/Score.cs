@@ -29,7 +29,6 @@ public class Score : MonoBehaviour
     {
         score = 0;
         HS.Init(this, "Randy Goes Bananas");
-        HS.SubmitHighScore(this, "Bob", (int)score);
     }
 
     // Update is called once per frame
@@ -58,5 +57,10 @@ public class Score : MonoBehaviour
     public void addTimeScore()
     {
         score += timeScore;
+    }
+
+    public void SubmitScore() 
+    {
+        HS.SubmitHighScore(this, "Bob", (int)score);
     }
 }
