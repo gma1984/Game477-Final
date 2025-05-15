@@ -1543,6 +1543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3496446155579048401}
   - component: {fileID: 8909760623670690781}
+  - component: {fileID: 7983621703292952708}
   m_Layer: 0
   m_Name: Player_ColorActivater
   m_TagString: Untagged
@@ -1591,12 +1592,47 @@ MonoBehaviour:
   magentaSignal: {fileID: 3121113492741396664}
   cyanSignal: {fileID: 1158678490452808087}
   whiteSignal: {fileID: 2744037929520887812}
+  colorWheel: {fileID: 0}
+  redIndicator: {fileID: 0}
+  greenIndicator: {fileID: 0}
+  blueIndicator: {fileID: 0}
+  yellowIndicator: {fileID: 0}
+  magentaIndicator: {fileID: 0}
+  cyanIndicator: {fileID: 0}
+  whiteIndicator: {fileID: 0}
   red: 0
   green: 0
   blue: 0
   portOne: 0
   portTwo: 0
   portThree: 0
+--- !u!50 &7983621703292952708
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474631378566681671}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4076908047914488502
 GameObject:
   m_ObjectHideFlags: 0
