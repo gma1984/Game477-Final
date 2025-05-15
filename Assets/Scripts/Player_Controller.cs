@@ -33,6 +33,13 @@ public class Player_Controller : MonoBehaviour
     public GameObject portTwoPopup;
     public GameObject portThreePopup;
     public Pause pause;
+    public GameObject checkPoint;
+    private bool checkRed;
+    private bool checkGreen;
+    private bool checkBlue;
+    private bool checkPortOne;
+    private bool checkPortTwo;
+    private bool checkPortThree;  
 
     // coyote time and jump compensation
     public float EdgeCompensation;
@@ -220,6 +227,16 @@ public class Player_Controller : MonoBehaviour
             Score.Instance.addTimeScore();
             SceneManager.LoadScene("Game Win");
         }
+        if (collision.gameObject.CompareTag("CheckFlag"))
+        {
+            checkPoint = collision.gameObject;
+            checkRed = ColorScript.red;
+            checkGreen = ColorScript.green;
+            checkBlue = ColorScript.blue;
+            checkPortOne = ColorScript.portOne;
+            checkPortTwo = ColorScript.portTwo;
+            checkPortThree = ColorScript.portThree;
+        }
     }
 
     public bool RaycastFromSensor(Transform groundSensor, Transform groundSensorTwo, Transform groundSensorThree)
@@ -260,5 +277,70 @@ public class Player_Controller : MonoBehaviour
     public void DisableInput()
     {
         input.Disable();
+    }
+
+    public void Respawn()
+    {
+        if (checkPortThree)
+        {
+            ColorScript.red = true;
+            ColorScript.green = true;
+            ColorScript.blue = true;
+            ColorScript.portOne = true;
+            ColorScript.portTwo = true;
+            ColorScript.portThree = true;
+        }
+        else if (checkPortTwo)
+        {
+            ColorScript.red = true;
+            ColorScript.green = true;
+            ColorScript.blue = true;
+            ColorScript.portOne = true;
+            ColorScript.portTwo = true;
+            ColorScript.portThree = false;
+        }
+        else if (checkBlue)
+        {
+            ColorScript.red = true;
+            ColorScript.green = true;
+            ColorScript.blue = true;
+            ColorScript.portOne = true;
+            ColorScript.portTwo = false;
+            ColorScript.portThree = false;
+        }
+        else if (checkGreen)
+        {
+            ColorScript.red = true;
+            ColorScript.green = true;
+            ColorScript.blue = false;
+            ColorScript.portOne = true;
+            ColorScript.portTwo = false;
+            ColorScript.portThree = false;
+        }
+        else if (checkRed && checkPortOne)
+        {
+            ColorScript.red = true;
+            ColorScript.green = false;
+            ColorScript.blue = false;
+            ColorScript.portOne = true;
+            ColorScript.portTwo = false;
+            ColorScript.portThree = false;
+        }
+        else
+        {
+            ColorScript.red = false;
+            ColorScript.green = false;
+            ColorScript.blue = false;
+            ColorScript.portOne = false;
+            ColorScript.portTwo = false;
+            ColorScript.portThree = false;
+        }
+        playerHealth = 3;
+        hearts[0].SetActive(true);
+        hearts[1].SetActive(true);
+        hearts[2].SetActive(true);
+        transform.position = checkPoint.transform.position;
+        Time.timeScale = 1;
+        gameOver.SetActive(false);
     }
 }
