@@ -122,7 +122,7 @@ public class Player_Controller : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((collision.gameObject.CompareTag("BasicEnemy") && !iFrames) || (collision.gameObject.CompareTag("Kill Barrier") && !iFrames))
+        if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
         {
             playerHealth -= 1;
             hearts[playerHealth].SetActive(false);
@@ -133,7 +133,13 @@ public class Player_Controller : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        // Bleh
+        if (collision.gameObject.CompareTag("Kill Barrier") && !iFrames)
+        {
+            playerHealth -= 1;
+            hearts[playerHealth].SetActive(false);
+            iFrames = true;
+            Invoke("RemoveIFrames", 1.5f);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
