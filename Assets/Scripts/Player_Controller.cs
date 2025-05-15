@@ -26,6 +26,13 @@ public class Player_Controller : MonoBehaviour
     private int dir = 0;
     private Rigidbody rigid;
     public GameObject[] hearts;
+    public GameObject gameOver;
+    public GameObject redPopup;
+    public GameObject greenPopup;
+    public GameObject bluePopup;
+    public GameObject portTwoPopup;
+    public GameObject portThreePopup;
+    public Pause pause;
 
     // coyote time and jump compensation
     public float EdgeCompensation;
@@ -37,7 +44,7 @@ public class Player_Controller : MonoBehaviour
         input = new InputSystem_Actions();
         input.Enable();
         sr = GetComponent<SpriteRenderer>();
-
+        Time.timeScale = 1;
         rb = GetComponent<Rigidbody2D>();
         jump = new Vector3(0.0f, 6.0f, 0.0f);
         playerHealth = 3;
@@ -46,6 +53,11 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            playerHealth -= 1;
+            hearts[playerHealth].SetActive(false);
+        }
         if (playerHealth >= 3)
         {
             playerHealth = 3;
@@ -97,7 +109,9 @@ public class Player_Controller : MonoBehaviour
         {
             playerHealth = 0;
             input.Disable();
-            SceneManager.LoadScene("Game Over");
+            Time.timeScale = 0;
+            pause.canPause = false;
+            gameOver.SetActive(true);
         }
     }
 
@@ -150,30 +164,45 @@ public class Player_Controller : MonoBehaviour
             ColorScript.portOne = true;
             Destroy(collision.gameObject);
             Score.Instance.AddToScore(3000f);
+            Time.timeScale = 0;
+            pause.canPause = false;
+            redPopup.SetActive(true);
         }
         if (collision.gameObject.CompareTag("PlugG"))
         {
             ColorScript.green = true;
             Destroy(collision.gameObject);
             Score.Instance.AddToScore(3000f);
+            Time.timeScale = 0;
+            pause.canPause = false;
+            greenPopup.SetActive(true);
         }
         if (collision.gameObject.CompareTag("PlugB"))
         {
             ColorScript.blue = true;
             Destroy(collision.gameObject);
             Score.Instance.AddToScore(3000f);
+            Time.timeScale = 0;
+            pause.canPause = false;
+            bluePopup.SetActive(true);
         }
         if (collision.gameObject.CompareTag("Port2"))
         {
             ColorScript.portTwo = true;
             Destroy(collision.gameObject);
             Score.Instance.AddToScore(3000f);
+            Time.timeScale = 0;
+            pause.canPause = false;
+            portTwoPopup.SetActive(true);
         }
         if (collision.gameObject.CompareTag("Port3"))
         {
             ColorScript.portThree = true;
             Destroy(collision.gameObject);
             Score.Instance.AddToScore(3000f);
+            Time.timeScale = 0;
+            pause.canPause = false;
+            portThreePopup.SetActive(true);
         }
         if (collision.gameObject.CompareTag("HealHeart") && playerHealth <= 2)
         {

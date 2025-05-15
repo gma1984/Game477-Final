@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     public bool isPaused;
+    public bool canPause = true;
     public Player_Controller player;
     public GameObject pauseMenu;
     public GameObject controls;
@@ -15,11 +16,11 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused && canPause)
         {
             PauseGame();
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused && canPause)
         {
             UnpauseGame();
         }
