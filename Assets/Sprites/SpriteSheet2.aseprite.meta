@@ -263,6 +263,66 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
+  - name: EnemyBullet1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 1, y: 1, z: 1, w: 1}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 27
+      width: 4
+      height: 4
+    spriteID: a5f879fa6002a4785b663285c38c4982
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Flagpole
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 7}
+    rect:
+      serializedVersion: 2
+      x: 186
+      y: 37
+      width: 7
+      height: 32
+    spriteID: 1c5dd02dae61146b9aa31a8fb07e428d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Flag1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 52
+      width: 19
+      height: 12
+    spriteID: cf14bda03d6ec484b9236bc001412714
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
     uuid:
@@ -276,7 +336,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: SpriteSheet2
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -285,6 +345,15 @@ ScriptedImporter:
         width: 320
         height: 161
       spriteId: 6491d41b8e51f407196490c4bdea408c
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 67
+        width: 17
+        height: 12
+      spriteId: 64a8ea47b38e4443bbe506c620a81d3a
     linkedCells: []
     parentIndex: -1
   platformSettings:
