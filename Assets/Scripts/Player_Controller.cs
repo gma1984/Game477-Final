@@ -66,11 +66,6 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            playerHealth -= 1;
-            hearts[playerHealth].SetActive(false);
-        }
         if (playerHealth >= 3)
         {
             playerHealth = 3;
