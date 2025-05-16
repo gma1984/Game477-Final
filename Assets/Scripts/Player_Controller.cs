@@ -39,7 +39,12 @@ public class Player_Controller : MonoBehaviour
     private bool checkBlue;
     private bool checkPortOne;
     private bool checkPortTwo;
-    private bool checkPortThree;  
+    private bool checkPortThree;
+    public GameObject plugRed;
+    public GameObject plugGreen;
+    public GameObject plugBlue;
+    public GameObject portTwo;
+    public GameObject portThree;  
 
     // coyote time and jump compensation
     public float EdgeCompensation;
@@ -169,7 +174,7 @@ public class Player_Controller : MonoBehaviour
         {
             ColorScript.red = true;
             ColorScript.portOne = true;
-            Destroy(collision.gameObject);
+            plugRed.SetActive(false);
             Score.Instance.AddToScore(3000f);
             Time.timeScale = 0;
             pause.canPause = false;
@@ -178,7 +183,7 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("PlugG"))
         {
             ColorScript.green = true;
-            Destroy(collision.gameObject);
+            plugGreen.SetActive(false);
             Score.Instance.AddToScore(3000f);
             Time.timeScale = 0;
             pause.canPause = false;
@@ -187,7 +192,7 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("PlugB"))
         {
             ColorScript.blue = true;
-            Destroy(collision.gameObject);
+            plugBlue.SetActive(false);
             Score.Instance.AddToScore(3000f);
             Time.timeScale = 0;
             pause.canPause = false;
@@ -196,7 +201,7 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Port2"))
         {
             ColorScript.portTwo = true;
-            Destroy(collision.gameObject);
+            portTwo.SetActive(false);
             Score.Instance.AddToScore(3000f);
             Time.timeScale = 0;
             pause.canPause = false;
@@ -205,7 +210,7 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Port3"))
         {
             ColorScript.portThree = true;
-            Destroy(collision.gameObject);
+            portThree.SetActive(false);
             Score.Instance.AddToScore(3000f);
             Time.timeScale = 0;
             pause.canPause = false;
@@ -298,6 +303,7 @@ public class Player_Controller : MonoBehaviour
             ColorScript.portOne = true;
             ColorScript.portTwo = true;
             ColorScript.portThree = false;
+            portThree.SetActive(true);
         }
         else if (checkBlue)
         {
@@ -307,6 +313,8 @@ public class Player_Controller : MonoBehaviour
             ColorScript.portOne = true;
             ColorScript.portTwo = false;
             ColorScript.portThree = false;
+            portTwo.SetActive(true);
+            portThree.SetActive(true);
         }
         else if (checkGreen)
         {
@@ -316,6 +324,9 @@ public class Player_Controller : MonoBehaviour
             ColorScript.portOne = true;
             ColorScript.portTwo = false;
             ColorScript.portThree = false;
+            plugBlue.SetActive(true);
+            portTwo.SetActive(true);
+            portThree.SetActive(true);
         }
         else if (checkRed && checkPortOne)
         {
@@ -325,6 +336,10 @@ public class Player_Controller : MonoBehaviour
             ColorScript.portOne = true;
             ColorScript.portTwo = false;
             ColorScript.portThree = false;
+            plugGreen.SetActive(true);
+            plugBlue.SetActive(true);
+            portTwo.SetActive(true);
+            portThree.SetActive(true);
         }
         else
         {
@@ -334,11 +349,17 @@ public class Player_Controller : MonoBehaviour
             ColorScript.portOne = false;
             ColorScript.portTwo = false;
             ColorScript.portThree = false;
+            plugRed.SetActive(true);
+            plugGreen.SetActive(true);
+            plugBlue.SetActive(true);
+            portTwo.SetActive(true);
+            portThree.SetActive(true);
         }
         playerHealth = 3;
         hearts[0].SetActive(true);
         hearts[1].SetActive(true);
         hearts[2].SetActive(true);
+        ColorScript.ResetState();
         transform.position = checkPoint.transform.position;
         Time.timeScale = 1;
         gameOver.SetActive(false);

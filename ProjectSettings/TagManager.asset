@@ -25,6 +25,7 @@ TagManager:
   - WinZone
   - HealHeart
   - Score
+  - CheckFlag
   layers:
   - Default
   - TransparentFX

@@ -553,4 +553,9 @@ public class Player_ActivateColors : MonoBehaviour
     #endregion
 
     #endregion
+
+    public void ResetState()
+    {
+        ChangeState(State.None);
+    }
 }
