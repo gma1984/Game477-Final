@@ -683,6 +683,12 @@ MonoBehaviour:
   portThreePopup: {fileID: 5188695691175411137}
   pause: {fileID: 3147285778191399337}
   checkPoint: {fileID: 0}
+  plugRed: {fileID: 0}
+  plugGreen: {fileID: 0}
+  plugBlue: {fileID: 0}
+  portTwo: {fileID: 0}
+  portThree: {fileID: 0}
+  heartPickups: []
   EdgeCompensation: 0.2
 --- !u!1 &731986790831416847
 GameObject:
@@ -970,7 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press G, X, 2, or Numpad 8 to toggle the green signal on or off
+  m_text: Press 2 or K to toggle the green signal on or off
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2020,7 +2026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Q or Numpad 5 to switch any activated color off
+  m_text: Press Q or M to switch any activated color off
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5438,7 +5444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press B, C, 3, or Numpad 9 to toggle the blue signal on or off
+  m_text: Press 3 or L to toggle the blue signal on or off
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7726,7 +7732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press R, Z, 1, or Numpad 7 to toggle the red signal on or off
+  m_text: Press 1 or J to toggle the red signal on or off
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

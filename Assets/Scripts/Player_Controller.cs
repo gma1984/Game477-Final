@@ -44,7 +44,8 @@ public class Player_Controller : MonoBehaviour
     public GameObject plugGreen;
     public GameObject plugBlue;
     public GameObject portTwo;
-    public GameObject portThree;  
+    public GameObject portThree;
+    public GameObject[] heartPickups; 
 
     // coyote time and jump compensation
     public float EdgeCompensation;
@@ -65,6 +66,11 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            playerHealth -= 1;
+            hearts[playerHealth].SetActive(false);
+        }
         if (playerHealth >= 3)
         {
             playerHealth = 3;
@@ -213,7 +219,7 @@ public class Player_Controller : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("HealHeart") && playerHealth <= 2)
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             if (playerHealth <= 2)
             {
                 hearts[playerHealth].SetActive(true);
@@ -350,6 +356,10 @@ public class Player_Controller : MonoBehaviour
             portTwo.SetActive(true);
             portThree.SetActive(true);
         }
+        foreach (GameObject heartPickup in heartPickups)
+        {
+            heartPickup.SetActive(true);
+        }
         playerHealth = 3;
         hearts[0].SetActive(true);
         hearts[1].SetActive(true);
@@ -357,6 +367,7 @@ public class Player_Controller : MonoBehaviour
         ColorScript.ResetState();
         transform.position = checkPoint.transform.position;
         Time.timeScale = 1;
+        input.Enable();
         gameOver.SetActive(false);
     }
 }
