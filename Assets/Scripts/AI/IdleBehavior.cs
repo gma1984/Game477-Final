@@ -21,12 +21,12 @@ public class IdleBehavior : AIBehavior
     {
         if (nextWander > Time.time)
         {
-            var wanderRange = Rat.GetMoveRange();
-            wanderX = Random.Range(wanderRange.x, wanderRange.y);
+            //var wanderRange = Rat.GetMoveRange();
+            //wanderX = Random.Range(wanderRange.x, wanderRange.y);
             nextWander = Time.time + Random.Range(minWanderWait, maxWanderWait);
         }
 
-        Rat.MoveTo(wanderX);
+       // Rat.MoveTo(wanderX);
     }
 
     // Called when behavior is ended

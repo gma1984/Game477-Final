@@ -11,9 +11,9 @@ public class Rat : MonoBehaviour
     private Transform player;
     private bool nearPlayer = false;
 
-    private AIBehavior idle = new IdleBehavior(this);
-    private AIBehavior flee = new FleeBehavior(this);
-    private AIBehavior panic = new FleeBehavior(this);
+    private static AIBehavior idle = new IdleBehavior();
+    private AIBehavior flee = new FleeBehavior();
+    private AIBehavior panic = new FleeBehavior();
     private AIBehavior activeBehavior = idle;
 
 
@@ -31,9 +31,9 @@ public class Rat : MonoBehaviour
 
     void ChangeAIBehavior(AIBehavior behavior)
     {
-        activeBehavior.End();
+        //activeBehavior.End();
         activeBehavior = behavior;
-        behavior.Stop();
+        //behavior.Stop();
     }
 
     void CheckForPlayer()
