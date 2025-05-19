@@ -22,13 +22,13 @@ public class Score : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        HS.Init(this, "Randy Goes Bananas");
     }
 
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
-        HS.Init(this, "Randy Goes Bananas");
     }
 
     // Update is called once per frame
@@ -59,8 +59,8 @@ public class Score : MonoBehaviour
         score += timeScore;
     }
 
-    public void SubmitScore() 
+    public void SubmitScore(string scoreName) 
     {
-        HS.SubmitHighScore(this, "Bob", (int)score);
+        HS.SubmitHighScore(this, scoreName, (int)score);
     }
 }
