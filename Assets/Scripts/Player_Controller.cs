@@ -45,6 +45,7 @@ public class Player_Controller : MonoBehaviour
     public GameObject plugBlue;
     public GameObject portTwo;
     public GameObject portThree;
+    public GameObject iFrameIndicator;
     public GameObject[] heartPickups; 
 
     // coyote time and jump compensation
@@ -149,7 +150,7 @@ public class Player_Controller : MonoBehaviour
             playerHealth -= 1;
             hearts[playerHealth].SetActive(false);
             iFrames = true;
-            Invoke("RemoveIFrames", 1.5f);
+            StartCoroutine("IFrames");
         }
     }
 
@@ -160,7 +161,7 @@ public class Player_Controller : MonoBehaviour
             playerHealth -= 1;
             hearts[playerHealth].SetActive(false);
             iFrames = true;
-            Invoke("RemoveIFrames", 1.5f);
+            StartCoroutine("IFrames");
         }
     }
 
@@ -260,8 +261,19 @@ public class Player_Controller : MonoBehaviour
         //fill later
     }
 
-    private void RemoveIFrames()
+    IEnumerator IFrames()
     {
+        iFrameIndicator.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        iFrameIndicator.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
+        iFrameIndicator.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        iFrameIndicator.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
+        iFrameIndicator.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        iFrameIndicator.SetActive(false);
         iFrames = false;
     }
 

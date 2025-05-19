@@ -370,9 +370,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 234636569143039377, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 234636569143039377, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 234636569143039377, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 600846800171700924, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_Name
       value: Randy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094481643868069729, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1226331851}
+    - target: {fileID: 2094481643868069729, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnpauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094481643868069729, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881099031742464695, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5887289652821206257, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -412,6 +440,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5887289652821206257, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893525600615054745, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1226331851}
+    - target: {fileID: 6893525600615054745, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893525600615054745, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043207288533262360, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7964678738438559386, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
@@ -1431,6 +1475,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5179067492217657273, guid: 3b8e6504eee55af429b198f73000887a, type: 3}
   m_PrefabInstance: {fileID: 1179261041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1226331851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3147285778191399337, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+  m_PrefabInstance: {fileID: 223555421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928f84e8f2a414f4a93c39b0d9075f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1228532399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 600846800171700924, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
