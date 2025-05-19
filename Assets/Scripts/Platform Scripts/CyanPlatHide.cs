@@ -5,6 +5,7 @@ using UnityEngine;
 public class CyanPlatHide : MonoBehaviour
 {
 
+    public GameObject onParticles;
     public Collider2D physicalCollider;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -12,6 +13,7 @@ public class CyanPlatHide : MonoBehaviour
         if (collision.gameObject.CompareTag("CyanSignal"))
         {
             physicalCollider.enabled = false;
+            onParticles.SetActive(false);
         }
     }
 
@@ -20,6 +22,7 @@ public class CyanPlatHide : MonoBehaviour
         if (collision.gameObject.CompareTag("CyanSignal"))
         {
             physicalCollider.enabled = true;
+            onParticles.SetActive(true);
         }
     }
 }

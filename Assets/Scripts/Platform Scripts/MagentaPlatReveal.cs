@@ -5,6 +5,7 @@ using UnityEngine;
 public class MagentaPlatReveal : MonoBehaviour
 {
 
+    public GameObject onParticles;
     public Collider2D physicalCollider;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -12,6 +13,7 @@ public class MagentaPlatReveal : MonoBehaviour
         if (collision.gameObject.CompareTag("MagentaSignal"))
         {
             physicalCollider.enabled = true;
+            onParticles.SetActive(true);
         }
     }
 
@@ -20,6 +22,7 @@ public class MagentaPlatReveal : MonoBehaviour
         if (collision.gameObject.CompareTag("MagentaSignal"))
         {
             physicalCollider.enabled = false;
+            onParticles.SetActive(false);
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BluePlatReveal : MonoBehaviour
 {
 
+    public GameObject onParticles;
     public Collider2D physicalCollider;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -12,6 +13,7 @@ public class BluePlatReveal : MonoBehaviour
         if (collision.gameObject.CompareTag("BlueSignal"))
         {
             physicalCollider.enabled = true;
+            onParticles.SetActive(true);
         }
     }
 
@@ -20,6 +22,7 @@ public class BluePlatReveal : MonoBehaviour
         if (collision.gameObject.CompareTag("BlueSignal"))
         {
             physicalCollider.enabled = false;
+            onParticles.SetActive(false);
         }
     }
 }
