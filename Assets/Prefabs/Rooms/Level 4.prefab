@@ -809,9 +809,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3625848155916176872}
     m_Modifications:
+    - target: {fileID: 1367397436573047469, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.017
+      objectReference: {fileID: 0}
     - target: {fileID: 2001290711161836416, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
       propertyPath: m_Name
       value: WhiteHide
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095522992544421215, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_Size.x
+      value: 0.85241705
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626756234008820688, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_Size.x
+      value: 0.85670936
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626756234008820688, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0016351789
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626756234008820688, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.85241705
       objectReference: {fileID: 0}
     - target: {fileID: 5262482517325869950, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
       propertyPath: m_LocalScale.x
@@ -860,6 +880,30 @@ PrefabInstance:
     - target: {fileID: 5262482517325869950, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003439325756345798, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_Size.x
+      value: 0.85241705
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328639388192889224, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657921237990130405, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8547838
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657921237990130405, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.000817284
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657921237990130405, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.001562655
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657921237990130405, guid: fe261aa67bd91544ea1d677d6f171166, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.85241705
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1181,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6488666239087216861, guid: 1f44ee1ced715f04699ff3d2c6c4d03a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 81.5149
+      value: 82.35
       objectReference: {fileID: 0}
     - target: {fileID: 6488666239087216861, guid: 1f44ee1ced715f04699ff3d2c6c4d03a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1967,6 +2011,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3625848155916176872}
     m_Modifications:
+    - target: {fileID: 1289513286826303097, guid: 1f44ee1ced715f04699ff3d2c6c4d03a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 16.63055
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289513286826303097, guid: 1f44ee1ced715f04699ff3d2c6c4d03a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.8605
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320543546371215039, guid: 1f44ee1ced715f04699ff3d2c6c4d03a, type: 3}
+      propertyPath: m_Size.x
+      value: 16.630507
+      objectReference: {fileID: 0}
     - target: {fileID: 2222838886856942355, guid: 1f44ee1ced715f04699ff3d2c6c4d03a, type: 3}
       propertyPath: m_Name
       value: Ceiling
@@ -2014,6 +2070,10 @@ PrefabInstance:
     - target: {fileID: 6488666239087216861, guid: 1f44ee1ced715f04699ff3d2c6c4d03a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161705858167499785, guid: 1f44ee1ced715f04699ff3d2c6c4d03a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.8608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
