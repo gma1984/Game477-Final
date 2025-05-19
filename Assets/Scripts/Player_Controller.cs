@@ -13,7 +13,6 @@ public class Player_Controller : MonoBehaviour
     public float jumpForce;
     public bool isGrounded;
     Rigidbody2D rb;
-    SpriteRenderer sr;
     public Player_ActivateColors ColorScript;
     public Transform groundSensor;
     public Transform groundSensor2;
@@ -57,7 +56,6 @@ public class Player_Controller : MonoBehaviour
     {
         input = new InputSystem_Actions();
         input.Enable();
-        sr = GetComponent<SpriteRenderer>();
         Time.timeScale = 1;
         rb = GetComponent<Rigidbody2D>();
         jump = new Vector3(0.0f, 6.0f, 0.0f);
@@ -75,12 +73,12 @@ public class Player_Controller : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
-                sr.flipX = true;
+                transform.eulerAngles = new Vector3(0, 180, 0);
                 dir = -1;
             }
             if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             {
-                sr.flipX = false;
+                transform.eulerAngles = new Vector3(0, 0, 0);
                 dir = 1;
             }
             isGrounded = RaycastFromSensor(groundSensor, groundSensor2, groundSensor3);
