@@ -10,6 +10,9 @@ public abstract class AIBehavior
     // Update is called once per frame while behavior is active
     public abstract void Update(Rat rat);
 
+    // FixedUpdate is called once per FixedUpdate while behavior is active
+    public abstract void FixedUpdate(Rat rat);
+
     // Called when behavior is ended
     public abstract void Stop(Rat rat);
 }

@@ -14,24 +14,29 @@ public class IdleBehavior : AIBehavior
     public override void Start(Rat rat)
     {
         nextWander = Time.time + Random.Range(minWanderWait, maxWanderWait);
+        wanderX = rat.transform.position.x;
     }
 
     // Update is called once per frame while behavior is active
     public override void Update(Rat rat)
     {
-        if (nextWander > Time.time)
+        if (Time.time > nextWander)
         {
-            //var wanderRange = Rat.GetMoveRange();
-            //wanderX = Random.Range(wanderRange.x, wanderRange.y);
+            var wanderRange = rat.GetWanderRange();
+            wanderX = Random.Range(wanderRange.x, wanderRange.y);
             nextWander = Time.time + Random.Range(minWanderWait, maxWanderWait);
+            Debug.Log(wanderX);
         }
-
-       // Rat.MoveTo(wanderX);
     }
 
     // Called when behavior is ended
     public override void Stop(Rat rat)
     {
 
+    }
+
+    public override void FixedUpdate(Rat rat)
+    {
+        rat.MoveTo(wanderX);
     }
 }
