@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
+    public ShakeCamera shakethecam;
     public float move_speed = 10;
     private InputSystem_Actions input;
     public Vector3 jump;
@@ -145,6 +146,7 @@ public class Player_Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BasicEnemy") && !iFrames)
         {
+            shakethecam.CamShake();
             playerHealth -= 1;
             hearts[playerHealth].SetActive(false);
             iFrames = true;
@@ -156,6 +158,7 @@ public class Player_Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Kill Barrier") && !iFrames)
         {
+            shakethecam.CamShake();
             playerHealth -= 1;
             hearts[playerHealth].SetActive(false);
             iFrames = true;
