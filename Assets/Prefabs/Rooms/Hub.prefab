@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 7051287721764290912}
   - component: {fileID: 2256577206204200537}
   - component: {fileID: 4988663329831473501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopRightFloorSprites_2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7588301, y: -0.035651207}
+  m_Offset: {x: -1.68361, y: -0.035651207}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0.125, w: 0.125}
     pivot: {x: 0.5, y: 0.5}
@@ -868,7 +868,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.56716, y: 2.520279}
+  m_Size: {x: 14.009645, y: 2.520279}
   m_EdgeRadius: 0
 --- !u!1 &2824678578409974603
 GameObject:
@@ -1301,7 +1301,7 @@ GameObject:
   - component: {fileID: 5763548058927852192}
   - component: {fileID: 7246384951754525802}
   - component: {fileID: 7993943129911827872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomRightFloorSprites_8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1514,7 +1514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4627453677184714270}
   - component: {fileID: 3013208173631640983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomLeftFloorSprites_6 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2103,7 +2103,7 @@ GameObject:
   - component: {fileID: 5490300754875462346}
   - component: {fileID: 5694621062054204242}
   - component: {fileID: 5187142307334812315}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomRightFloorSprites_8 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2821,7 +2821,7 @@ GameObject:
   - component: {fileID: 2913502964628191708}
   - component: {fileID: 8449278563658434630}
   - component: {fileID: 8038103105090930147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopLeftFloorSprites_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2951,7 +2951,7 @@ GameObject:
   - component: {fileID: 1082952862143912513}
   - component: {fileID: 1811081322985162682}
   - component: {fileID: 5713369934795455598}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopRightFloorSprites_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3081,7 +3081,7 @@ GameObject:
   - component: {fileID: 2829952538959704953}
   - component: {fileID: 8780002975868842184}
   - component: {fileID: 9188220807525726253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopRightFloorSprites_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

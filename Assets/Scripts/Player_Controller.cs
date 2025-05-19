@@ -284,6 +284,7 @@ public class Player_Controller : MonoBehaviour
     {
         if (checkPortThree)
         {
+            Score.Instance.score = 15000;
             ColorScript.red = true;
             ColorScript.green = true;
             ColorScript.blue = true;
@@ -293,6 +294,7 @@ public class Player_Controller : MonoBehaviour
         }
         else if (checkPortTwo)
         {
+            Score.Instance.score = 12000;
             ColorScript.red = true;
             ColorScript.green = true;
             ColorScript.blue = true;
@@ -303,6 +305,7 @@ public class Player_Controller : MonoBehaviour
         }
         else if (checkBlue)
         {
+            Score.Instance.score = 9000;
             ColorScript.red = true;
             ColorScript.green = true;
             ColorScript.blue = true;
@@ -314,6 +317,7 @@ public class Player_Controller : MonoBehaviour
         }
         else if (checkGreen)
         {
+            Score.Instance.score = 6000;
             ColorScript.red = true;
             ColorScript.green = true;
             ColorScript.blue = false;
@@ -326,6 +330,7 @@ public class Player_Controller : MonoBehaviour
         }
         else if (checkRed && checkPortOne)
         {
+            Score.Instance.score = 3000;
             ColorScript.red = true;
             ColorScript.green = false;
             ColorScript.blue = false;
@@ -339,6 +344,7 @@ public class Player_Controller : MonoBehaviour
         }
         else
         {
+            Score.Instance.score = 0;
             ColorScript.red = false;
             ColorScript.green = false;
             ColorScript.blue = false;
@@ -362,6 +368,7 @@ public class Player_Controller : MonoBehaviour
         ColorScript.ResetState();
         transform.position = checkPoint.transform.position;
         Time.timeScale = 1;
+        pause.canPause = true;
         input.Enable();
         gameOver.SetActive(false);
     }
