@@ -37,8 +37,8 @@ public class Rat : MonoBehaviour
         forceDir = (forceDir - (Vector2)transform.position).normalized;
         rb.AddForce(forceDir * moveSpeed, ForceMode2D.Force);
 
-        if (forceDir.x > 0) transform.localScale.Set(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        else transform.localScale.Set(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        if (forceDir.x > 0) transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        else transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         //rb.MovePosition((Vector2)transform.position + (forceDir * moveSpeed * Time.fixedDeltaTime));
         //rb.velocity = forceDir * moveSpeed + Physics2D.gravity;
     }
