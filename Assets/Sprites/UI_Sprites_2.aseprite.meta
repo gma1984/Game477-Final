@@ -151,7 +151,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 18
+      y: 83
       width: 50
       height: 50
     spriteID: 95683f906e9534871baecd01b9c88f70
@@ -171,7 +171,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 84
-      y: 36
+      y: 101
       width: 16
       height: 16
     spriteID: 40496afa5b4e44122baef041287e9c51
@@ -191,7 +191,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 132
-      y: 36
+      y: 101
       width: 16
       height: 16
     spriteID: bf1f1b30527384ebf959e72b9bc41431
@@ -211,7 +211,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 84
-      y: 4
+      y: 69
       width: 16
       height: 16
     spriteID: aceb6f9aa3fb846daad317dee386c3cd
@@ -231,7 +231,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 132
-      y: 4
+      y: 69
       width: 16
       height: 16
     spriteID: fc3252baada754a20b07f71fdf27b4b4
@@ -251,10 +251,30 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 108
-      y: 20
+      y: 85
       width: 16
       height: 16
     spriteID: c917b492f23a243ff9f128fcc94ca1d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: DeadRandy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 4
+      width: 54
+      height: 17
+    spriteID: 733838c0dfccb4c4eb3b4031c13804bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -281,9 +301,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 116
+        y: 51
         width: 144
-        height: 64
+        height: 129
       spriteId: 955dd09519726413ba5d593f43279a26
     linkedCells: []
     parentIndex: -1
@@ -352,4 +372,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 320, y: 180}
-  previousTextureSize: {x: 256, y: 128}
+  previousTextureSize: {x: 256, y: 256}
