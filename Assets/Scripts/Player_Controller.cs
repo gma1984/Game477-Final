@@ -48,6 +48,7 @@ public class Player_Controller : MonoBehaviour
     public GameObject iFrameIndicator;
     public GameObject[] heartPickups; 
     public AudioSource port2Song;
+    public Animator randyAnimation;
 
     // coyote time and jump compensation
     public float EdgeCompensation;
@@ -59,9 +60,11 @@ public class Player_Controller : MonoBehaviour
         input = new InputSystem_Actions();
         input.Enable();
         Time.timeScale = 1;
+        randyAnimation = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jump = new Vector3(0.0f, 6.0f, 0.0f);
         playerHealth = 3;
+        randyAnimation.Play("Base Layer.RandyIdle");
     }
 
     // Update is called once per frame
@@ -78,7 +81,7 @@ public class Player_Controller : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 180, 0);
                 dir = -1;
             }
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 dir = 1;
@@ -128,12 +131,14 @@ public class Player_Controller : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") == 0)
         {
+            randyAnimation.Play("Base Layer.RandyIdle");
             rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, 120f * Time.deltaTime), rb.velocity.y);
         }
         else
         {
             if (grounded == true)
             {
+                randyAnimation.Play("Base Layer.RandyMove");
                 rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, move_speed * direction, 75f * Time.deltaTime), rb.velocity.y);
             }
             else
