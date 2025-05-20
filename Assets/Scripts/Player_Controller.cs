@@ -47,6 +47,7 @@ public class Player_Controller : MonoBehaviour
     public GameObject portThree;
     public GameObject iFrameIndicator;
     public GameObject[] heartPickups; 
+    public AudioSource port2Song;
 
     // coyote time and jump compensation
     public float EdgeCompensation;
@@ -200,6 +201,7 @@ public class Player_Controller : MonoBehaviour
         {
             ColorScript.portTwo = true;
             portTwo.SetActive(false);
+            port2Song.volume = 1.0f;
             Score.Instance.AddToScore(3000f);
             Time.timeScale = 0;
             pause.canPause = false;

@@ -24,6 +24,9 @@ public class Player_ActivateColors : MonoBehaviour
     public GameObject magentaIndicator;
     public GameObject cyanIndicator;
     public GameObject whiteIndicator;
+    public AudioSource redSong;
+    public AudioSource greenSong;
+    public AudioSource blueSong;
     public bool red = false;
     public bool green = false;
     public bool blue = false;
@@ -96,6 +99,10 @@ public class Player_ActivateColors : MonoBehaviour
         magentaIndicator.SetActive(false);
         cyanIndicator.SetActive(false);
         whiteIndicator.SetActive(false);
+
+        redSong.volume = 0f;
+        greenSong.volume = 0f;
+        blueSong.volume = 0f;
     }
     private void StateEnter_Red()
     {
@@ -114,6 +121,10 @@ public class Player_ActivateColors : MonoBehaviour
         magentaIndicator.SetActive(false);
         cyanIndicator.SetActive(false);
         whiteIndicator.SetActive(false);
+
+        redSong.volume = 1.0f;
+        greenSong.volume = 0f;
+        blueSong.volume = 0f;
     }
     private void StateEnter_Green()
     {
@@ -132,6 +143,10 @@ public class Player_ActivateColors : MonoBehaviour
         magentaIndicator.SetActive(false);
         cyanIndicator.SetActive(false);
         whiteIndicator.SetActive(false);
+
+        redSong.volume = 0f;
+        greenSong.volume = 1.0f;
+        blueSong.volume = 0f;
     }
     private void StateEnter_Blue()
     {
@@ -150,6 +165,10 @@ public class Player_ActivateColors : MonoBehaviour
         magentaIndicator.SetActive(false);
         cyanIndicator.SetActive(false);
         whiteIndicator.SetActive(false);
+
+        redSong.volume = 0f;
+        greenSong.volume = 0f;
+        blueSong.volume = 1.0f;
     }
     private void StateEnter_Yellow()
     {
@@ -168,6 +187,10 @@ public class Player_ActivateColors : MonoBehaviour
         magentaIndicator.SetActive(false);
         cyanIndicator.SetActive(false);
         whiteIndicator.SetActive(false);
+
+        redSong.volume = 1.0f;
+        greenSong.volume = 1.0f;
+        blueSong.volume = 0f;
     }
     private void StateEnter_Magenta()
     {
@@ -186,6 +209,10 @@ public class Player_ActivateColors : MonoBehaviour
         magentaIndicator.SetActive(true);
         cyanIndicator.SetActive(false);
         whiteIndicator.SetActive(false);
+
+        redSong.volume = 1.0f;
+        greenSong.volume = 0f;
+        blueSong.volume = 1.0f;
     }
     private void StateEnter_Cyan()
     {
@@ -204,6 +231,10 @@ public class Player_ActivateColors : MonoBehaviour
         magentaIndicator.SetActive(false);
         cyanIndicator.SetActive(true);
         whiteIndicator.SetActive(false);
+
+        redSong.volume = 0f;
+        greenSong.volume = 1.0f;
+        blueSong.volume = 1.0f;
     }
     private void StateEnter_White()
     {
@@ -222,6 +253,10 @@ public class Player_ActivateColors : MonoBehaviour
         magentaIndicator.SetActive(true);
         cyanIndicator.SetActive(true);
         whiteIndicator.SetActive(true);
+
+        redSong.volume = 1.0f;
+        greenSong.volume = 1.0f;
+        blueSong.volume = 1.0f;
     }
     #endregion
 
