@@ -87,3 +87,6 @@ TagManager:
   - name: IFrameLayer
     uniqueID: 924432443
     locked: 0
+  - name: Fog
+    uniqueID: 1608719971
+    locked: 0
