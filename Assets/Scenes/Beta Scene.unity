@@ -570,7 +570,7 @@ PrefabInstance:
     - target: {fileID: 745655760226767395, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -661227119402420259, guid: b0e599e7634e541bbaa93363ad8405d0, type: 3}
+      objectReference: {fileID: 2130249188652555384, guid: b0e599e7634e541bbaa93363ad8405d0, type: 3}
     - target: {fileID: 745655760226767395, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -698,6 +698,10 @@ PrefabInstance:
     - target: {fileID: 1011974920828918092, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038457308129164945, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
+      propertyPath: m_text
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 1038457308129164945, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_fontSize
@@ -1098,7 +1102,7 @@ PrefabInstance:
     - target: {fileID: 3265293442101262401, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -661227119402420259, guid: b0e599e7634e541bbaa93363ad8405d0, type: 3}
+      objectReference: {fileID: 2130249188652555384, guid: b0e599e7634e541bbaa93363ad8405d0, type: 3}
     - target: {fileID: 3265293442101262401, guid: b0c378d22141a5d4e84ecaaa62e3d5c7, type: 3}
       propertyPath: m_Color.b
       value: 1
