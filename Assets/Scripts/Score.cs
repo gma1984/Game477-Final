@@ -7,7 +7,7 @@ using HighScore;
 public class Score : MonoBehaviour
 {
     public float timeScore = 60000f;
-    public float decreaseRate = 50f;
+    public float decreaseRate = 80f;
     public bool timer = true;
     public float score;
     public static Score Instance {get; private set;}
