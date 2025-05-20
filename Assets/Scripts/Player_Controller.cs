@@ -228,6 +228,7 @@ public class Player_Controller : MonoBehaviour
             Score.Instance.AddToScore(15000f);
             Score.Instance.timerStop();
             Score.Instance.addTimeScore();
+            input.Disable();
             SceneManager.LoadScene("Game Win");
         }
         if (collision.gameObject.CompareTag("CheckFlag"))
