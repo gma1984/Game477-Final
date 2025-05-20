@@ -14,7 +14,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (target != null)
         {
-            transform.localPosition = target.transform.localPosition + offset;
+            transform.position = target.transform.position + offset;
         }
     }
 }

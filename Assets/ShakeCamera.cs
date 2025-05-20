@@ -9,7 +9,7 @@ public class ShakeCamera : MonoBehaviour
 
     public void CamShake()
     {
-        cameraAnimator.SetTrigger("ScreenShake");
+        cameraAnimator.SetTrigger("ShakeScreen");
     }
 
 }
